@@ -16,8 +16,25 @@
 // });
 
 //聯絡我們js
-let contactBtn = document.querySelector("#contact-us-btn");
-console.log(contactBtn);
-contactBtn.addEventListener("click", () => {
-  alert("感謝您耐心地填寫，後續將盡快於您聯繫!");
+// let contactBtn = document.querySelector("#contact-us-btn");
+// console.log(contactBtn);
+// contactBtn.addEventListener("click", () => {
+//   alert("感謝您耐心地填寫，後續將盡快於您聯繫!");
+// });
+
+//填寫加盟表單
+let fillIn = document.querySelector("#send");
+console.log(fillIn);
+let form = document.querySelector("#join-form");
+console.log(form);
+let cross = document.querySelector("#cross");
+fillIn.addEventListener("click", () => {
+  if ((form.style.display = "none")) {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+});
+cross.addEventListener("click", () => {
+  form.remove();
 });

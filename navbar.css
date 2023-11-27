@@ -144,6 +144,7 @@ body div.sale div.sale-title {
   margin-bottom: 25px;
 }
 body div.sale div.sale-title h2 {
+  font-weight: normal;
   letter-spacing: 5px;
   border-bottom: 3px solid #a8cc05;
   font-size: 30px;
@@ -169,6 +170,8 @@ body div.sale div.sale-card div.card img {
   vertical-align: middle;
 }
 body div.sale div.sale-card div.card h3 {
+  font-weight: normal;
+  letter-spacing: 5px;
   transition: all 0.3s linear;
   height: 70px;
   background-color: #a8cc05;
@@ -189,6 +192,7 @@ body div.font-about div.about-text {
   width: 33%;
 }
 body div.font-about div.about-text h2 {
+  font-weight: normal;
   width: 250px;
   letter-spacing: 5px;
   border-bottom: 3px solid #a8cc05;
@@ -292,6 +296,7 @@ body div.news {
   position: relative;
 }
 body div.news h2.news-title {
+  font-weight: normal;
   width: 140px;
   padding-bottom: 5px;
   text-align: center;
@@ -306,11 +311,14 @@ body div.news div.news-info {
   height: 100px;
 }
 body div.news div.news-info p {
+  font-weight: lighter;
   margin: 10px 0px;
+  color: #666;
 }
 body div.news div.news-info p:last-child {
+  color: #000;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
 }
 body div.news a.news-more-info {
   font-size: 18px;
@@ -344,6 +352,7 @@ body div.store-search {
   height: 200px;
 }
 body div.store-search h2 {
+  font-weight: normal;
   width: 140px;
   padding-bottom: 5px;
   text-align: center;
@@ -538,7 +547,7 @@ body div.news-group .news-card .img-group .img-date {
   height: 45px;
   background-color: #a8cc05;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   border-radius: 0px 0px 20px 0px;
   text-align: center;
 }
@@ -571,6 +580,7 @@ body div.news-group .news-card .article-group h3.short {
   width: 105px;
 }
 body div.news-group .news-card .article-group h3 {
+  font-weight: normal;
   margin: 0 10px;
   border-bottom: 2px solid #a8cc05;
   width: 150px;
@@ -612,7 +622,6 @@ body div.page-list a {
   font-size: 20px;
   text-decoration: none;
   color: #000;
-  font-weight: bold;
   padding-top: 2px;
   background-color: #fff;
   border-radius: 50%;
@@ -641,23 +650,34 @@ body.about div.other-banner {
   width: 100%;
   height: 300px;
   position: relative;
-  background-image: url("./tea garden.jpg");
+  background-image: url("./首頁新品.png");
   background-size: cover;
 }
 body.about div.other-banner div.banner-title {
   position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
   text-align: center;
+  top: 100px;
+  right: 340px;
 }
 body.about div.other-banner div.banner-title h1 {
+  text-align: start;
+  width: 250px;
   color: #fff;
   font-size: 40px;
   font-weight: normal;
+  position: relative;
 }
-body.about div.other-banner div.banner-title h1:first-child {
-  border-bottom: 3px solid #a8cc05;
+body.about div.other-banner div.banner-title h1:first-of-type::after {
+  content: "";
+  position: absolute;
+  background-color: #a8cc05;
+  width: 200px;
+  height: 2px;
+  bottom: -15px;
+  right: 30px;
+}
+body.about div.other-banner div.banner-title h1:last-of-type {
+  text-align: end;
 }
 body.about div.process {
   background-image: url("./paper.png");
@@ -714,6 +734,7 @@ body.about div.process .precess-group .process-box i {
   margin-bottom: 20px;
 }
 body.about div.process .precess-group .process-box h3 {
+  font-weight: normal;
   font-size: 16px;
 }
 body.about main.main-process {
@@ -748,6 +769,8 @@ body.about main.main-process .main-process-info .text {
   flex: 1;
 }
 body.about main.main-process .main-process-info .text h2 {
+  letter-spacing: 5px;
+  font-weight: normal;
   font-size: 30px;
   margin-bottom: 30px;
   height: 40px;
@@ -777,6 +800,8 @@ body div.join-us .join-title {
   align-items: center;
 }
 body div.join-us .join-title h1 {
+  font-weight: normal;
+  letter-spacing: 5px;
   font-size: 35px;
   border-bottom: 2px solid #a8cc05;
   padding-bottom: 10px;
@@ -812,6 +837,8 @@ body div.join-us .join-support .join-box .img-area h3 {
   margin-top: 15px;
 }
 body div.join-us .join-support p {
+  line-height: 1.5;
+  letter-spacing: 1px;
   padding-top: 20px;
   text-align: center;
   border-radius: 0 0 30px 0;
@@ -827,8 +854,11 @@ body div.join-us p.join {
   color: #555;
   height: 40%;
   width: 90%;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 body div.join-step {
+  position: relative;
   background-color: #eee;
   background-image: url("./paper.png");
   display: flex;
@@ -836,7 +866,30 @@ body div.join-step {
   align-items: center;
   width: 100%;
 }
+body div.join-step .join-form {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body div.join-step .join-form form {
+  z-index: 11;
+  width: 50%;
+  height: 50%;
+  background-color: #555;
+  position: relative;
+}
+body div.join-step .join-form form div#cross {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #fff;
+  cursor: pointer;
+}
 body div.join-step h2 {
+  font-weight: normal;
   font-size: 30px;
   letter-spacing: 3px;
   margin: 50px 0;
@@ -861,6 +914,7 @@ body div.join-step .join-step-group .step {
   margin: 12px 0;
 }
 body div.join-step .join-step-group .step h3 {
+  font-weight: normal;
   margin: 0 15px;
   font-size: 20px;
   letter-spacing: 3px;
@@ -900,6 +954,7 @@ body div.location {
   align-items: center;
 }
 body div.location h2 {
+  font-weight: normal;
   letter-spacing: 5px;
   padding-top: 5px;
   width: 30%;
@@ -955,6 +1010,7 @@ body div.contact-us {
   align-items: center;
 }
 body div.contact-us h2 {
+  font-weight: normal;
   letter-spacing: 5px;
   padding-top: 5px;
   width: 30%;
@@ -1045,6 +1101,7 @@ body main.login-page div.login-group .log-in {
   height: 100%;
 }
 body main.login-page div.login-group .log-in h2 {
+  font-weight: normal;
   font-size: 35px;
   position: relative;
 }
@@ -1072,6 +1129,12 @@ body main.login-page div.login-group .log-in .group input {
   outline: none;
   border: transparent;
   border-radius: 5px;
+}
+body main.login-page div.login-group .log-in .group input::-moz-placeholder {
+  padding-left: 10px;
+}
+body main.login-page div.login-group .log-in .group input::placeholder {
+  padding-left: 10px;
 }
 body main.login-page div.login-group .log-in .btn {
   display: flex;
@@ -1135,6 +1198,7 @@ body main.login-page div.login-group .register::before {
   margin: auto;
 }
 body main.login-page div.login-group .register h2 {
+  font-weight: normal;
   font-size: 35px;
   position: relative;
 }
@@ -1149,6 +1213,7 @@ body main.login-page div.login-group .register h2::after {
 }
 body main.login-page div.login-group .register h3 {
   font-size: 20px;
+  font-weight: normal;
 }
 body main.login-page div.login-group .register a {
   cursor: pointer;
@@ -1295,174 +1360,6 @@ body.product div.product-group div.product-card-group .product-card p {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    background-color: #eee;
-  }
-  body div.news-banner {
-    background-color: #eee;
-    width: 100%;
-    height: 300px;
-    position: relative;
-    background-image: url("./tea garden.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-  body div.news-banner div.news-banner-title {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    text-align: center;
-  }
-  body div.news-banner div.news-banner-title h1 {
-    color: #fff;
-    font-size: 40px;
-    font-weight: normal;
-  }
-  body div.news-banner div.news-banner-title h1:first-child {
-    padding-bottom: 20px;
-    border-bottom: 3px solid #a8cc05;
-  }
-  body div.news-option {
-    background-color: #eee;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  body div.news-option div.option-items {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 20px;
-  }
-  body div.news-option div.option-items a {
-    width: 100px;
-    height: 50px;
-    text-align: center;
-    margin: 0px 10px;
-    font-size: 20px;
-    background-color: #a8cc05;
-    border-radius: 10px;
-    padding-top: 11px;
-    display: block;
-    color: #fff;
-    text-decoration: none;
-  }
-  body div.news-group {
-    background-color: #eee;
-    width: 100%;
-    height: 2000px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  body div.news-group .news-card {
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-  }
-  body div.news-group .news-card .img-group {
-    position: relative;
-    flex: 1;
-    height: 245px;
-  }
-  body div.news-group .news-card .img-group .img-date {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background-color: #a8cc05;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 0px 0px 20px 0px;
-    text-align: center;
-  }
-  body div.news-group .news-card .img-group img {
-    width: 100%;
-    height: 250px;
-    vertical-align: middle;
-  }
-  body div.news-group .news-card .article-group {
-    position: relative;
-    border-radius: 0px 0px 20px 0px;
-    flex: 2;
-    background-image: url("./paper.png");
-    display: flex;
-    flex-direction: column;
-  }
-  body div.news-group .news-card .article-group p {
-    padding: 0 10px;
-    margin: 20px 0;
-    font-weight: 500;
-    font-size: 12px;
-  }
-  body div.news-group .news-card .article-group p:last-of-type {
-    font-size: 15px;
-  }
-  body div.news-group .news-card .article-group h3.short {
-    width: 105px;
-  }
-  body div.news-group .news-card .article-group h3 {
-    margin: 0 10px;
-    border-bottom: 2px solid #a8cc05;
-    width: 150px;
-    padding-bottom: 8px;
-    font-size: 20px;
-  }
-  body div.news-group .news-card .article-group a {
-    position: absolute;
-    font-size: 8px;
-    bottom: 10px;
-    right: 10px;
-    width: 50px;
-    background-color: #a8cc05;
-    height: 20px;
-    text-align: center;
-    border-radius: 30px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    padding-top: 5px;
-  }
-  body div.page-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    margin-bottom: 20px;
-  }
-  body div.page-list a {
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    padding-top: 2px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: all 0.2s linear;
-  }
-  body div.page-list a:hover {
-    background-color: #a8cc05;
-    color: #fff;
-  }
-  body div.page-list i {
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-    font-size: 25px;
-    padding-top: 3px;
-    color: #a8cc05;
-  }
   footer {
     background-color: #ccc;
     display: flex;
