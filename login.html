@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>會員登入</title>
+    <!-- favicon -->
+    <link rel="icon" href="./favicon.png" />
+    <!-- reset -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- 
+    fonawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./navbar.css" />
+  </head>
+  <body class="about">
+    <header class="title">
+      <div class="hb">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <a href="./news.html">最新消息</a>
+        <a href="./about.html">關於我們</a>
+        <a href="./product.html">商品介紹</a>
+      </nav>
+      <div class="nav-img">
+        <a href="./fontPage.html"><img src="./Group 49.png" alt="logo" /></a>
+      </div>
+      <nav>
+        <a href="./location.html">聯絡我們</a>
+        <a href="./join.html">加盟專區</a>
+        <a href="./login.html">會員登入</a>
+      </nav>
+    </header>
+
+    <main class="login-page">
+      <div class="login-group">
+        <form class="log-in">
+          <h2>會員登入</h2>
+          <div class="group">
+            <label for="account"><i class="fa-solid fa-user"></i></label>
+            <input type="text" class="account" placeholder="Account number" />
+          </div>
+          <div class="group">
+            <label for="password"><i class="fa-solid fa-unlock"></i></label>
+            <input type="password" class="password" placeholder="Password" />
+          </div>
+          <div class="btn">
+            <button type="submit">登入</button>
+            <div class="reme-pws">
+              <label for="remember">記住密碼</label>
+              <input type="checkbox" id="remember" />
+            </div>
+          </div>
+          <a href="#" class="forget">忘記密碼?</a>
+        </form>
+
+        <form class="register">
+          <h2>成為Tea Select會員</h2>
+          <h3>首次加入會員，贈送100元購物金</h3>
+          <h3>購物金請至各門市使用</h3>
+          <a href="#">註冊會員</a>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <img src="./footer-logo.svg" alt="teaSelect" />
+        <div class="info">
+          <div class="breadcrumb">
+            <span>客服電話</span>
+            <span>商品列表</span>
+            <span>收到最新消息</span>
+            <span>加盟Tea Select</span>
+          </div>
+          <div class="info-icon">
+            <i class="fa-brands fa-line"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+          </div>
+        </div>
+        <div class="contact">
+          <p>客服時間:09:00~17:00</p>
+          <p>電話:03-3322221</p>
+          <p>信箱:teaselect@gmail.com</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          本網站為緯育TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
+        </p>
+      </div>
+    </footer>
+
+    <script src="./navbar.js"></script>
+  </body>
+</html>
