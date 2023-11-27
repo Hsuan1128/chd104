@@ -455,20 +455,29 @@ body div.news-banner {
   background-repeat: no-repeat;
 }
 body div.news-banner div.news-banner-title {
+  width: 250px;
   position: absolute;
   bottom: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
   text-align: center;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 body div.news-banner div.news-banner-title h1 {
   color: #fff;
   font-size: 40px;
   font-weight: normal;
+  position: relative;
 }
-body div.news-banner div.news-banner-title h1:first-child {
-  padding-bottom: 20px;
-  border-bottom: 3px solid #a8cc05;
+body div.news-banner div.news-banner-title h1:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 25px;
+  background-color: #a8cc05;
+  height: 2px;
+  width: 200px;
 }
 body div.news-option {
   background-color: #eee;
@@ -1041,7 +1050,7 @@ body main.login-page div.login-group .log-in h2 {
 }
 body main.login-page div.login-group .log-in h2::after {
   content: "";
-  border: 2px solid #a8cc05;
+  border-bottom: 3px solid #a8cc05;
   width: 140px;
   position: absolute;
   left: 0;
@@ -1116,7 +1125,7 @@ body main.login-page div.login-group .register {
 body main.login-page div.login-group .register::before {
   content: "";
   position: absolute;
-  border: 2px solid black;
+  border-bottom: 3px solid black;
   width: 350px;
   rotate: 90deg;
   height: 0;
@@ -1131,7 +1140,7 @@ body main.login-page div.login-group .register h2 {
 }
 body main.login-page div.login-group .register h2::after {
   content: "";
-  border: 2px solid #a8cc05;
+  border-bottom: 3px solid #a8cc05;
   width: 295px;
   position: absolute;
   left: 0;
@@ -1161,11 +1170,11 @@ body main.login-page div.login-group .register a:hover {
   background-color: #fff;
 }
 
-body {
+body.product {
   background-color: #eee;
   background-image: url("./paper.png");
 }
-body div.product-banner {
+body.product div.product-banner {
   background-color: #eee;
   width: 100%;
   height: 350px;
@@ -1175,17 +1184,17 @@ body div.product-banner {
   align-items: center;
   background-image: url("./paper.png");
 }
-body div.product-banner img {
+body.product div.product-banner img {
   width: 100%;
   height: 100%;
 }
 @media (width <= 768px) {
-  body div.product-banner img {
+  body.product div.product-banner img {
     -o-object-fit: cover;
        object-fit: cover;
   }
 }
-body div.product-group {
+body.product div.product-group {
   background-color: #eee;
   background-image: url("./paper.png");
   display: flex;
@@ -1194,7 +1203,7 @@ body div.product-group {
   width: 100%;
   margin: 50px 0;
 }
-body div.product-group div.side-bar {
+body.product div.product-group div.side-bar {
   display: flex;
   align-self: start;
   flex-direction: column;
@@ -1202,7 +1211,7 @@ body div.product-group div.side-bar {
   padding-right: 20px;
 }
 @media (width <= 768px) {
-  body div.product-group div.side-bar {
+  body.product div.product-group div.side-bar {
     padding-right: 0;
     width: 100%;
     display: flex;
@@ -1211,44 +1220,55 @@ body div.product-group div.side-bar {
     border-right: transparent;
   }
 }
-body div.product-group div.side-bar span {
-  font-size: 30px;
+body.product div.product-group div.side-bar span {
+  font-size: 25px;
   margin: 20px 0;
 }
 @media (width <= 768px) {
-  body div.product-group div.side-bar span {
+  body.product div.product-group div.side-bar span {
     font-size: 25px;
   }
 }
-body div.product-group div.product-card-group {
+body.product div.product-group div.product-card-group {
   width: 60%;
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
-body div.product-group div.product-card-group .product-card {
+body.product div.product-group div.product-card-group .product-card {
   width: 25%;
   height: 250px;
+  overflow: hidden;
+}
+body.product div.product-group div.product-card-group .product-card:hover .img-group img {
+  transform: scale(1.1);
 }
 @media (width <= 768px) {
-  body div.product-group div.product-card-group .product-card {
+  body.product div.product-group div.product-card-group .product-card {
     width: 33%;
   }
 }
 @media (width <= 415px) {
-  body div.product-group div.product-card-group .product-card {
+  body.product div.product-group div.product-card-group .product-card {
     width: 42%;
   }
 }
-body div.product-group div.product-card-group .product-card img {
+body.product div.product-group div.product-card-group .product-card div.img-group {
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
+}
+body.product div.product-group div.product-card-group .product-card div.img-group img {
+  transition: all 0.3s linear;
+  transform: scale(1);
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
   width: 100%;
-  height: 80%;
+  height: 100%;
 }
-body div.product-group div.product-card-group .product-card p {
+body.product div.product-group div.product-card-group .product-card p {
   background-color: #e3f6d7;
   width: 100%;
   height: 20%;
@@ -1257,17 +1277,17 @@ body div.product-group div.product-card-group .product-card p {
   padding: 11px;
 }
 @media (width <= 415px) {
-  body div.product-group div.product-card-group {
+  body.product div.product-group div.product-card-group {
     width: 100%;
   }
 }
 @media (width <= 768px) {
-  body div.product-group div.product-card-group {
+  body.product div.product-group div.product-card-group {
     width: 100%;
   }
 }
 @media (width <= 768px) {
-  body div.product-group {
+  body.product div.product-group {
     margin: 10px 0;
     width: 100%;
     flex-direction: column;

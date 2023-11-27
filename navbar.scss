@@ -490,18 +490,27 @@ body {
     background-repeat: no-repeat;
 
     div.news-banner-title {
+      width: 250px;
       position: absolute;
       bottom: 50%;
       left: 50%;
       transform: translate(-50%, 50%);
       text-align: center;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
       h1 {
         color: #fff;
         font-size: 40px;
         font-weight: normal;
-        &:first-child {
-          padding-bottom: 20px;
-          border-bottom: 3px solid $textColor;
+        position: relative;
+        &:first-child::after {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: 25px;
+          background-color: $textColor;
+          height: 2px;
+          width: 200px;
         }
       }
     }
@@ -1112,7 +1121,7 @@ body {
           position: relative;
           &::after {
             content: "";
-            border: 2px solid $textColor;
+            border-bottom: 3px solid $textColor;
             width: 140px;
             position: absolute;
             left: 0;
@@ -1188,7 +1197,7 @@ body {
         &::before {
           content: "";
           position: absolute;
-          border: 2px solid black;
+          border-bottom: 3px solid black;
           width: 350px;
           rotate: 90deg;
           height: 0;
@@ -1203,7 +1212,7 @@ body {
           position: relative;
           &::after {
             content: "";
-            border: 2px solid $textColor;
+            border-bottom: 3px solid $textColor;
             width: 295px;
             position: absolute;
             left: 0;
@@ -1239,7 +1248,7 @@ body {
 }
 
 //商品介紹
-body {
+body.product {
   background-color: $bgc;
   background-image: url("./paper.png");
   div.product-banner {
@@ -1287,7 +1296,7 @@ body {
         //border-bottom: 2px solid #666;
       }
       span {
-        font-size: 30px;
+        font-size: 25px;
         margin: 20px 0;
         @media (width<=768px) {
           font-size: 25px;
@@ -1303,6 +1312,10 @@ body {
       .product-card {
         width: 25%;
         height: 250px;
+        overflow: hidden;
+        &:hover .img-group img {
+          transform: scale(1.1);
+        }
         //product-card RWD
         @media (width<=768px) {
           width: 33%;
@@ -1310,12 +1323,20 @@ body {
         @media (width<=415px) {
           width: 42%;
         }
-        img {
-          object-fit: cover;
-          display: block;
+        div.img-group {
+          overflow: hidden;
           width: 100%;
           height: 80%;
+          img {
+            transition: all 0.3s linear;
+            transform: scale(1);
+            object-fit: cover;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
         }
+
         p {
           background-color: $joinColor;
           width: 100%;
