@@ -934,12 +934,17 @@ body {
       // justify-content: center;
       // align-items: center;
       form {
+        margin: auto;
+        margin-top: 120px;
         z-index: 11;
         width: 50%;
         height: 50%;
         background-color: #555;
         position: relative;
         div#cross {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
           position: absolute;
           top: -5px;
           right: -5px;

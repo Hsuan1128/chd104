@@ -29,12 +29,16 @@ let form = document.querySelector("#join-form");
 console.log(form);
 let cross = document.querySelector("#cross");
 fillIn.addEventListener("click", () => {
-  if ((form.style.display = "none")) {
+  if (form.style.display == "none") {
     form.style.display = "block";
   } else {
     form.style.display = "none";
   }
 });
 cross.addEventListener("click", () => {
-  form.remove();
+  if (form.style.display == "block") {
+    form.style.display = "none";
+  } else {
+    form.style.display = "block";
+  }
 });

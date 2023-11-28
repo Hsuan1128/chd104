@@ -875,6 +875,8 @@ body div.join-step .join-form {
   height: 100%;
 }
 body div.join-step .join-form form {
+  margin: auto;
+  margin-top: 120px;
   z-index: 11;
   width: 50%;
   height: 50%;
@@ -882,6 +884,9 @@ body div.join-step .join-form form {
   position: relative;
 }
 body div.join-step .join-form form div#cross {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   position: absolute;
   top: -5px;
   right: -5px;
