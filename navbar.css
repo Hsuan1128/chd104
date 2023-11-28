@@ -875,23 +875,67 @@ body div.join-step .join-form {
   height: 100%;
 }
 body div.join-step .join-form form {
+  border-radius: 20px;
   margin: auto;
-  margin-top: 120px;
+  margin-top: 30px;
   z-index: 11;
   width: 50%;
-  height: 50%;
-  background-color: #555;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #aaa;
   position: relative;
 }
 body div.join-step .join-form form div#cross {
-  width: 20px;
-  height: 20px;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 2px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
   top: -5px;
   right: -5px;
   background-color: #fff;
   cursor: pointer;
+}
+body div.join-step .join-form form .join-input {
+  width: 50%;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+body div.join-step .join-form form .join-input label {
+  font-size: 20px;
+}
+body div.join-step .join-form form .join-input input {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: transparent;
+  outline: none;
+}
+body div.join-step .join-form form .join-input select {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: transparent;
+  outline: none;
+}
+body div.join-step .join-form form .join-input textarea {
+  margin-top: 10px;
+  width: 100%;
+}
+body div.join-step .join-form form .join-input-location {
+  width: 50%;
+  margin: 10px 0;
+}
+body div.join-step .join-form form .join-input-location p {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 body div.join-step h2 {
   font-weight: normal;

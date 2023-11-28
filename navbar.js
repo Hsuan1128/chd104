@@ -42,3 +42,9 @@ cross.addEventListener("click", () => {
     form.style.display = "block";
   }
 });
+
+let submit = document.querySelector("#submit");
+submit.addEventListener("click", () => {
+  form.style.display = "none";
+  alert("填寫成功");
+});
