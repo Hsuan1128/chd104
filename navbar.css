@@ -76,12 +76,27 @@ body header.title nav:last-of-type {
   justify-content: flex-start;
 }
 body header.title nav a {
+  position: relative;
   text-decoration: none;
   font-size: 20px;
   margin: 0 20px;
   color: black;
   transform: translateY(0);
   transition: all 0.2s linear;
+}
+body header.title nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -5px;
+  height: 0;
+  border-bottom: 3px solid #a8cc05;
+  transition: all 0.3s linear;
+}
+body header.title nav a:hover::after {
+  right: 0;
+  left: 0;
 }
 body header.title nav a:hover {
   transform: translateY(-3px);
@@ -471,7 +486,6 @@ body div.news-banner div.news-banner-title {
   transform: translate(-50%, 50%);
   text-align: center;
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 body div.news-banner div.news-banner-title h1 {
   color: #fff;

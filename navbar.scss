@@ -78,12 +78,27 @@ body {
         justify-content: flex-start;
       }
       a {
+        position: relative;
         text-decoration: none;
         font-size: 20px;
         margin: 0 20px;
         color: black;
         transform: translateY(0);
         transition: all 0.2s linear;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          right: 50%;
+          bottom: -5px;
+          height: 0;
+          border-bottom: 3px solid $textColor;
+          transition: all 0.3s linear;
+        }
+        &:hover::after {
+          right: 0;
+          left: 0;
+        }
         &:hover {
           transform: translateY(-3px);
           color: $textColor;
@@ -506,7 +521,7 @@ body {
       transform: translate(-50%, 50%);
       text-align: center;
       border-radius: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
+      // background-color: rgba(0, 0, 0, 0.5);
       h1 {
         color: #fff;
         font-size: 40px;
