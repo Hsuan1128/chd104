@@ -948,6 +948,7 @@ body div.join-step .join-form form .join-input label {
   font-size: 20px;
 }
 body div.join-step .join-form form .join-input input {
+  padding: 0 10px;
   margin-top: 10px;
   width: 100%;
   height: 40px;
@@ -964,6 +965,10 @@ body div.join-step .join-form form .join-input select {
   outline: none;
 }
 body div.join-step .join-form form .join-input textarea {
+  border-radius: 10px;
+  outline: none;
+  border: transparent;
+  padding: 10px;
   margin-top: 10px;
   width: 100%;
 }
@@ -1123,6 +1128,7 @@ body div.contact-us div.input-group .input label {
   font-size: 20px;
 }
 body div.contact-us div.input-group .input input {
+  padding: 0 10px;
   margin-top: 10px;
   width: 100%;
   height: 40px;
@@ -1138,6 +1144,7 @@ body div.contact-us div.input-group .textarea label {
   font-size: 20px;
 }
 body div.contact-us div.input-group .textarea textarea {
+  padding: 10px;
   border: transparent;
   margin-top: 10px;
   outline: none;
@@ -1210,18 +1217,13 @@ body main.login-page div.login-group .log-in .group label i {
   color: #555;
 }
 body main.login-page div.login-group .log-in .group input {
+  padding: 0 10px;
   margin-left: 10px;
   height: 100%;
   width: 80%;
   outline: none;
   border: transparent;
   border-radius: 5px;
-}
-body main.login-page div.login-group .log-in .group input::-moz-placeholder {
-  padding-left: 10px;
-}
-body main.login-page div.login-group .log-in .group input::placeholder {
-  padding-left: 10px;
 }
 body main.login-page div.login-group .log-in .btn {
   display: flex;
