@@ -140,10 +140,34 @@ body div.banner {
 }
 body div.banner div.banner-title {
   position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  text-align: center;
+  top: 40px;
+  right: 520px;
+  width: 40%;
+  height: 80%;
+}
+body div.banner div.banner-title h1 {
+  letter-spacing: 5px;
+  color: #000;
+  font-size: 40px;
+  font-weight: normal;
+  position: relative;
+}
+body div.banner div.banner-title h1:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  background-color: #a8cc05;
+  height: 3px;
+  width: 200px;
+}
+body div.banner div.banner-title h1:last-of-type {
+  padding-left: 30px;
+}
+body div.banner div.banner-title p {
+  color: #666;
+  margin-top: 50px;
+  font-size: 20px;
 }
 body div.sale {
   background-color: #eee;

@@ -142,19 +142,37 @@ body {
     background-repeat: no-repeat;
 
     div.banner-title {
+      //border: 2px solid black;
       position: absolute;
-      bottom: 50%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-      text-align: center;
-      // h1 {
-      //   color: #fff;
-      //   font-size: 40px;
-      //   font-weight: normal;
-      //   &:first-child {
-      //     border-bottom: 3px solid $textColor;
-      //   }
-      // }
+      top: 40px;
+      right: 520px;
+      width: 40%;
+      height: 80%;
+      h1 {
+        letter-spacing: 5px;
+        color: #000;
+        font-size: 40px;
+        font-weight: normal;
+        position: relative;
+        &:first-child::after {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          background-color: $textColor;
+          height: 3px;
+          width: 200px;
+        }
+        &:last-of-type {
+          padding-left: 30px;
+        }
+      }
+      p {
+        color: #666;
+        margin-top: 50px;
+        //border: 2px solid green;
+        font-size: 20px;
+      }
     }
   }
 
