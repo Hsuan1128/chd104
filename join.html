@@ -29,11 +29,10 @@
   </head>
   <body>
     <header class="title">
-      <div class="hb">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <input type="checkbox" name="hb" id="menu-switch" />
+      <label class="hb" for="menu-switch">
+        <i class="fa-solid fa-bars"></i>
+      </label>
       <nav>
         <a href="./news.html">最新消息</a>
         <a href="./about.html">關於我們</a>
@@ -168,7 +167,10 @@
 
     <footer>
       <div class="footer-info">
-        <img src="./footer-logo.svg" alt="teaSelect" />
+        <div class="img">
+          <img src="./footer-logo.svg" alt="teaSelect" />
+        </div>
+
         <div class="info">
           <div class="breadcrumb">
             <span>客服電話</span>
@@ -202,6 +204,7 @@
       let form = document.querySelector("#join-form");
       console.log(form);
       let cross = document.querySelector("#cross");
+      form.style.display = "none";
       fillIn.addEventListener("click", () => {
         if (form.style.display == "none") {
           form.style.display = "block";

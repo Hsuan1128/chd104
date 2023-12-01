@@ -25,7 +25,7 @@ body img.fixed-img {
 body header.title {
   box-shadow: 0px 3px 4px #aaa;
   width: 100%;
-  height: 110px;
+  height: 90px;
   display: flex;
   position: sticky;
   top: 0;
@@ -35,25 +35,35 @@ body header.title {
   background-image: url("./paper.png");
   background-color: #eee;
 }
-body header.title div.hb {
+@media (width <= 768px) {
+  body header.title {
+    height: 70px;
+    width: 100%;
+  }
+}
+body header.title input#menu-switch {
+  position: absolute;
+  display: none;
+}
+body header.title label.hb {
   position: absolute;
   right: 5px;
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: rgb(211, 219, 211);
   display: none;
   text-align: center;
-  padding-top: 8px;
+  padding-top: 10px;
 }
-body header.title div.hb i {
-  font-size: 55px;
+body header.title label.hb i {
+  font-size: 40px;
   color: #555;
 }
 @media (width <= 768px) {
-  body header.title div.hb {
+  body header.title label.hb {
     display: block;
   }
 }
@@ -63,7 +73,6 @@ body header.title nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  font-size: 25px;
   align-items: flex-end;
   height: 100%;
 }
@@ -78,7 +87,8 @@ body header.title nav:last-of-type {
 body header.title nav a {
   position: relative;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
   margin: 0 20px;
   color: black;
   transform: translateY(0);
@@ -114,18 +124,18 @@ body header.title div.nav-img {
   body header.title div.nav-img {
     justify-content: flex-start;
     align-items: center;
-    width: 120px;
-    height: 80px;
+    width: 100px;
+    height: 60px;
   }
 }
 body header.title div.nav-img img {
-  width: 180px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
 }
 @media (width <= 768px) {
   body header.title div.nav-img img {
-    width: 120px;
-    height: 70px;
+    width: 100px;
+    height: 60px;
     margin-left: 10px;
   }
 }
@@ -148,17 +158,17 @@ body div.banner div.banner-title {
 body div.banner div.banner-title h1 {
   letter-spacing: 5px;
   color: #000;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: normal;
   position: relative;
 }
 body div.banner div.banner-title h1:first-child::after {
   content: "";
   position: absolute;
-  bottom: -20px;
+  bottom: -15px;
   left: 0;
   background-color: #a8cc05;
-  height: 3px;
+  height: 2px;
   width: 200px;
 }
 body div.banner div.banner-title h1:last-of-type {
@@ -167,7 +177,7 @@ body div.banner div.banner-title h1:last-of-type {
 body div.banner div.banner-title p {
   color: #666;
   margin-top: 50px;
-  font-size: 20px;
+  font-size: 18px;
 }
 body div.sale {
   background-color: #eee;
@@ -186,7 +196,7 @@ body div.sale div.sale-title h2 {
   font-weight: normal;
   letter-spacing: 5px;
   border-bottom: 3px solid #a8cc05;
-  font-size: 30px;
+  font-size: 25px;
   padding-bottom: 5px;
 }
 body div.sale div.sale-card {
@@ -224,7 +234,7 @@ body div.font-about {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 body div.font-about div.about-text {
   position: relative;
@@ -235,7 +245,7 @@ body div.font-about div.about-text h2 {
   width: 250px;
   letter-spacing: 5px;
   border-bottom: 3px solid #a8cc05;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 50px;
   padding-bottom: 5px;
 }
@@ -341,7 +351,7 @@ body div.news h2.news-title {
   text-align: center;
   border-bottom: 3px solid #a8cc05;
   letter-spacing: 5px;
-  font-size: 30px;
+  font-size: 25px;
 }
 body div.news div.news-info {
   padding-top: 20px;
@@ -365,7 +375,7 @@ body div.news a.news-more-info {
   color: #fff;
   text-decoration: none;
   position: absolute;
-  right: 150px;
+  right: 120px;
   bottom: 30px;
   width: 120px;
   height: 35px;
@@ -397,16 +407,18 @@ body div.store-search h2 {
   text-align: center;
   border-bottom: 3px solid #a8cc05;
   letter-spacing: 5px;
-  font-size: 30px;
+  font-size: 25px;
 }
 body div.store-search div.input-group {
   width: 65%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
 }
 body div.store-search div.input-group input {
   width: 45%;
+  padding: 0 5px;
   height: 35px;
   margin: 20px 20px 20px 0px;
 }
@@ -415,19 +427,17 @@ body div.store-search div.input-group input:focus {
 }
 body div.store-search div.input-group input::-moz-placeholder {
   color: #666;
-  padding-left: 10px;
 }
 body div.store-search div.input-group input::placeholder {
   color: #666;
-  padding-left: 10px;
 }
 body div.store-search div.input-group input.address {
-  width: 75%;
+  width: 93%;
 }
 body div.store-search div.input-group a {
   position: absolute;
   bottom: 22px;
-  right: 45px;
+  right: -100px;
   font-size: 18px;
   width: 120px;
   padding-bottom: 3px;
@@ -449,26 +459,67 @@ body footer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 180px;
+  height: 150px;
+}
+@media (width <= 768px) {
+  body footer {
+    height: 320px;
+  }
 }
 body footer div.footer-info {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid #999;
 }
-body footer div.footer-info img {
-  width: 150px;
-  height: 150px;
+@media (width <= 768px) {
+  body footer div.footer-info {
+    flex-direction: column;
+  }
+}
+body footer div.footer-info .img {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (width <= 768px) {
+  body footer div.footer-info .img {
+    width: 100%;
+  }
+}
+body footer div.footer-info .img img {
+  width: 120px;
+  height: 120px;
+}
+@media (width <= 768px) {
+  body footer div.footer-info .img img {
+    width: 80px;
+    height: 80px;
+  }
 }
 body footer div.footer-info div.info {
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+@media (width <= 768px) {
+  body footer div.footer-info div.info {
+    width: 100%;
+  }
+}
+body footer div.footer-info div.info div.breadcrumb {
+  display: flex;
+  justify-content: center;
+}
+@media (width <= 768px) {
+  body footer div.footer-info div.info div.breadcrumb {
+    width: 100%;
+  }
+}
 body footer div.footer-info div.info div.breadcrumb span {
-  font-size: 20px;
+  font-size: 16px;
 }
 body footer div.footer-info div.info div.breadcrumb span + span::before {
   content: "/";
@@ -476,10 +527,31 @@ body footer div.footer-info div.info div.breadcrumb span + span::before {
 }
 body footer div.footer-info div.info div.info-icon {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+@media (width <= 768px) {
+  body footer div.footer-info div.info div.info-icon {
+    margin: 20px 0 10px 0;
+  }
 }
 body footer div.footer-info div.info div.info-icon i {
-  font-size: 40px;
+  font-size: 30px;
+  margin: 0 30px;
+}
+body footer div.footer-info div.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 25%;
+  height: 100%;
+}
+@media (width <= 768px) {
+  body footer div.footer-info div.contact {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
 }
 body footer div.footer-info div.contact p {
   margin: 10px 0px;
@@ -513,7 +585,7 @@ body div.news-banner div.news-banner-title {
 }
 body div.news-banner div.news-banner-title h1 {
   color: #fff;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: normal;
   position: relative;
 }
@@ -701,7 +773,7 @@ body.about div.other-banner div.banner-title h1 {
   text-align: start;
   width: 250px;
   color: #fff;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: normal;
   position: relative;
 }
@@ -728,7 +800,7 @@ body.about div.process {
 }
 body.about div.process h2 {
   flex: 1;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 5px;
   width: 28%;
   text-align: center;
@@ -797,7 +869,6 @@ body.about main.main-process .main-process-info img {
   width: 100%;
   height: 250px;
   vertical-align: middle;
-  box-shadow: 3px 3px 4px #888;
 }
 body.about main.main-process .main-process-info .text {
   display: flex;
@@ -809,7 +880,7 @@ body.about main.main-process .main-process-info .text {
 body.about main.main-process .main-process-info .text h2 {
   letter-spacing: 5px;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 30px;
   height: 40px;
   border-bottom: 3px solid #a8cc05;
@@ -818,8 +889,8 @@ body.about main.main-process .main-process-info .text p {
   color: #555;
   width: 90%;
   font-size: 16px;
-  letter-spacing: 2px;
-  line-height: 1.25rem;
+  letter-spacing: 3px;
+  line-height: 1.5rem;
 }
 
 body {
@@ -898,7 +969,10 @@ body div.join-us p.join {
 body div.join-step {
   position: relative;
   background-color: #eee;
-  background-image: url("./paper.png");
+  background-image: url("./leaf bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -982,7 +1056,7 @@ body div.join-step .join-form form .join-input-location p {
 }
 body div.join-step h2 {
   font-weight: normal;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 3px;
   margin: 50px 0;
 }
@@ -998,7 +1072,7 @@ body div.join-step .join-step-group .step {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ccc;
+  background-color: #ddd;
   display: flex;
   width: 90%;
   height: 80px;
@@ -1008,14 +1082,14 @@ body div.join-step .join-step-group .step {
 body div.join-step .join-step-group .step h3 {
   font-weight: normal;
   margin: 0 15px;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 3px;
 }
 body div.join-step .join-step-group .step .trangle {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #ccc;
+  background-color: #ddd;
   bottom: -15px;
   left: 30px;
   transform: rotate(45deg);
@@ -1052,7 +1126,7 @@ body div.location h2 {
   width: 30%;
   height: 20%;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
 }
 body div.location .location-info {
   width: 60%;
@@ -1108,7 +1182,7 @@ body div.contact-us h2 {
   width: 30%;
   height: 20%;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
 }
 body div.contact-us div.input-group {
   background-color: rgb(211, 219, 211);
@@ -1121,15 +1195,16 @@ body div.contact-us div.input-group {
   width: 50%;
 }
 body div.contact-us div.input-group .input {
+  margin: 10px 0;
   width: 60%;
   flex-wrap: wrap;
 }
 body div.contact-us div.input-group .input label {
-  font-size: 20px;
+  font-size: 16px;
 }
 body div.contact-us div.input-group .input input {
   padding: 0 10px;
-  margin-top: 10px;
+  margin-top: 5px;
   width: 100%;
   height: 40px;
   border-radius: 10px;
@@ -1141,7 +1216,7 @@ body div.contact-us div.input-group .textarea {
   flex-wrap: wrap;
 }
 body div.contact-us div.input-group .textarea label {
-  font-size: 20px;
+  font-size: 16px;
 }
 body div.contact-us div.input-group .textarea textarea {
   padding: 10px;
@@ -1185,6 +1260,15 @@ body main.login-page div.login-group {
   justify-content: center;
   align-items: center;
 }
+@media (width <= 768px) {
+  body main.login-page div.login-group {
+    background-image: url("./paper.png");
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    border-radius: 0px;
+  }
+}
 body main.login-page div.login-group .log-in {
   position: relative;
   display: flex;
@@ -1194,15 +1278,26 @@ body main.login-page div.login-group .log-in {
   width: 50%;
   height: 100%;
 }
+@media (width <= 768px) {
+  body main.login-page div.login-group .log-in {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
 body main.login-page div.login-group .log-in h2 {
   font-weight: normal;
-  font-size: 35px;
+  font-size: 25px;
   position: relative;
+}
+@media (width <= 768px) {
+  body main.login-page div.login-group .log-in h2 {
+    margin-bottom: 20px;
+  }
 }
 body main.login-page div.login-group .log-in h2::after {
   content: "";
   border-bottom: 3px solid #a8cc05;
-  width: 140px;
+  width: 100px;
   position: absolute;
   left: 0;
   right: 0;
@@ -1211,6 +1306,15 @@ body main.login-page div.login-group .log-in h2::after {
 body main.login-page div.login-group .log-in .group {
   height: 40px;
   width: 60%;
+}
+@media (width <= 768px) {
+  body main.login-page div.login-group .log-in .group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+  }
 }
 body main.login-page div.login-group .log-in .group label i {
   font-size: 20px;
@@ -1227,6 +1331,7 @@ body main.login-page div.login-group .log-in .group input {
 }
 body main.login-page div.login-group .log-in .btn {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 70%;
@@ -1257,13 +1362,19 @@ body main.login-page div.login-group .log-in .btn button:hover {
 }
 @media (width <= 768px) {
   body main.login-page div.login-group .log-in .btn button {
-    width: 50%;
+    width: 100%;
   }
 }
 body main.login-page div.login-group .log-in a {
   position: absolute;
-  bottom: 15px;
   right: 40px;
+  bottom: 10px;
+}
+@media (width <= 768px) {
+  body main.login-page div.login-group .log-in a {
+    bottom: 3px;
+    right: 40px;
+  }
 }
 body main.login-page div.login-group .register {
   position: relative;
@@ -1273,6 +1384,11 @@ body main.login-page div.login-group .register {
   align-items: center;
   width: 50%;
   height: 100%;
+}
+@media (width <= 768px) {
+  body main.login-page div.login-group .register {
+    width: 100%;
+  }
 }
 body main.login-page div.login-group .register::before {
   content: "";
@@ -1286,22 +1402,41 @@ body main.login-page div.login-group .register::before {
   left: -190px;
   margin: auto;
 }
+@media (width <= 768px) {
+  body main.login-page div.login-group .register::before {
+    display: none;
+  }
+}
 body main.login-page div.login-group .register h2 {
   font-weight: normal;
-  font-size: 35px;
+  font-size: 25px;
   position: relative;
+  width: 100%;
+  text-align: center;
+}
+@media (width <= 768px) {
+  body main.login-page div.login-group .register h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 body main.login-page div.login-group .register h2::after {
   content: "";
   border-bottom: 3px solid #a8cc05;
-  width: 295px;
+  width: 220px;
   position: absolute;
   left: 0;
   right: 0;
+  margin: auto;
   bottom: -15px;
 }
+@media (width <= 768px) {
+  body main.login-page div.login-group .register h2::after {
+    width: 220px;
+  }
+}
 body main.login-page div.login-group .register h3 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: normal;
 }
 body main.login-page div.login-group .register a {
@@ -1310,8 +1445,8 @@ body main.login-page div.login-group .register a {
   font-size: 20px;
   text-decoration: none;
   margin: 20px 0;
-  background-color: #a8cc05;
-  color: #fff;
+  background-color: #ddd;
+  color: black;
   width: 70%;
   height: 35px;
   text-align: center;
@@ -1319,8 +1454,14 @@ body main.login-page div.login-group .register a {
   border-radius: 30px;
   transition: all 0.3s linear;
 }
+@media (width <= 768px) {
+  body main.login-page div.login-group .register a {
+    background-color: #eee;
+    color: #a8cc05;
+  }
+}
 body main.login-page div.login-group .register a:hover {
-  color: #000;
+  color: #a8cc05;
   background-color: #fff;
 }
 
@@ -1336,16 +1477,19 @@ body.product div.product-banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("./paper.png");
 }
 body.product div.product-banner img {
   width: 100%;
   height: 100%;
+  -o-object-position: center center;
+     object-position: center center;
 }
 @media (width <= 768px) {
   body.product div.product-banner img {
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 70% 10%;
+       object-position: 70% 10%;
   }
 }
 body.product div.product-group {
@@ -1356,8 +1500,11 @@ body.product div.product-group {
   align-items: center;
   width: 100%;
   margin: 50px 0;
+  position: relative;
 }
 body.product div.product-group div.side-bar {
+  position: sticky;
+  top: 120px;
   display: flex;
   align-self: start;
   flex-direction: column;
@@ -1369,13 +1516,15 @@ body.product div.product-group div.side-bar {
     padding-right: 0;
     width: 100%;
     display: flex;
+    position: relative;
+    top: 0;
     align-items: center;
     justify-content: center;
     border-right: transparent;
   }
 }
 body.product div.product-group div.side-bar span {
-  font-size: 25px;
+  font-size: 20px;
   margin: 20px 0;
 }
 @media (width <= 768px) {
@@ -1445,39 +1594,5 @@ body.product div.product-group div.product-card-group .product-card p {
     margin: 10px 0;
     width: 100%;
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  footer {
-    background-color: #ccc;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 250px;
-  }
-  footer div.footer-info {
-    background-color: #ccc;
-    display: flex;
-    height: 300px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border-bottom: 1px solid #999;
-  }
-  footer div.footer-info img {
-    width: 30px;
-    height: 30px;
-  }
-  footer div.footer-info div.info div.breadcrumb {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  footer div.footer-info div.info div.breadcrumb span {
-    font-size: 5px;
-  }
-  footer div.copyright {
-    background-color: #ccc;
   }
 }/*# sourceMappingURL=navbar.css.map */

@@ -29,11 +29,10 @@
   </head>
   <body class="about">
     <header class="title">
-      <div class="hb">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <input type="checkbox" name="hb" id="menu-switch" />
+      <label class="hb" for="menu-switch">
+        <i class="fa-solid fa-bars"></i>
+      </label>
       <nav>
         <a href="./news.html">最新消息</a>
         <a href="./about.html">關於我們</a>
@@ -55,17 +54,17 @@
           <h2>會員登入</h2>
           <div class="group">
             <label for="account"><i class="fa-solid fa-user"></i></label>
-            <input type="text" class="account" placeholder="Account number" />
+            <input type="text" class="account" placeholder="帳號" />
           </div>
           <div class="group">
             <label for="password"><i class="fa-solid fa-unlock"></i></label>
-            <input type="password" class="password" placeholder="Password" />
+            <input type="password" class="password" placeholder="密碼" />
           </div>
           <div class="btn">
             <button type="submit">登入</button>
             <div class="reme-pws">
-              <label for="remember">記住密碼</label>
               <input type="checkbox" id="remember" />
+              <label for="remember">記住密碼</label>
             </div>
           </div>
           <a href="#" class="forget">忘記密碼?</a>
@@ -82,7 +81,10 @@
 
     <footer>
       <div class="footer-info">
-        <img src="./footer-logo.svg" alt="teaSelect" />
+        <div class="img">
+          <img src="./footer-logo.svg" alt="teaSelect" />
+        </div>
+
         <div class="info">
           <div class="breadcrumb">
             <span>客服電話</span>
