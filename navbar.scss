@@ -48,9 +48,39 @@ body {
       height: 70px;
       width: 100%;
     }
-    input#menu-switch {
+
+    nav.hb-nav {
+      background-color: $bgc;
+      background-image: url("./paper.png");
       position: absolute;
+      //border: 2px solid red;
+      right: 0;
+      top: 100%;
+      height: 60vh;
+      width: 100%;
       display: none;
+      flex-wrap: wrap;
+      overflow: hidden;
+      @media (width <= 768px) {
+        display: block;
+      }
+
+      ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li {
+          //border: 2px solid green;
+          display: flex;
+          justify-content: center;
+          a {
+            font-size: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid $textColor;
+          }
+        }
+      }
     }
     label.hb {
       position: absolute;
@@ -71,6 +101,13 @@ body {
       @media (width <= 768px) {
         display: block;
       }
+    }
+    input#menu-switch {
+      position: absolute;
+      display: none;
+    }
+    input#menu-switch:checked ~ .title .hb-nav {
+      display: none;
     }
     nav {
       //border: 2px solid blue;
@@ -149,10 +186,10 @@ body {
     height: 350px;
     //border: 1px solid red;
     position: relative;
-    background-image: url("./關於我們.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-
+    img {
+      width: 100%;
+      height: 100%;
+    }
     div.banner-title {
       //border: 2px solid black;
       position: absolute;
@@ -540,6 +577,9 @@ body {
           }
           span {
             font-size: 16px;
+            @media (width <= 768px) {
+              font-size: 14px;
+            }
             & + span::before {
               content: "/";
               margin: 0 5px;
@@ -579,6 +619,9 @@ body {
     div.copyright {
       padding-top: 5px;
       text-align: center;
+      @media (width <= 768px) {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -637,6 +680,10 @@ body {
       justify-content: space-evenly;
       align-items: flex-end;
       padding-bottom: 20px;
+      gap: 5px;
+      @media (width <= 768px) {
+        width: 90%;
+      }
       a {
         width: 100px;
         height: 50px;
@@ -668,10 +715,19 @@ body {
       display: flex;
       margin: 10px 0;
       height: 200px;
+      @media (width <= 768px) {
+        flex-direction: column;
+        //border: 2px solid red;
+        height: 450px;
+        width: 80%;
+      }
       .img-group {
         position: relative;
         flex: 1;
         height: 200px;
+        @media (width <= 768px) {
+          height: 50%;
+        }
         //border: 2px solid red;
         .img-date {
           position: absolute;
@@ -705,6 +761,7 @@ body {
           padding: 0 10px;
           margin: 10px 0;
           font-weight: 500;
+          line-height: 1.35rem;
           //border: 2px solid red;
           &:last-of-type {
             font-size: 16px;
@@ -789,16 +846,29 @@ body.about {
     background-color: #eee;
     width: 100%;
     height: 300px;
-    //border: 1px solid red;
     position: relative;
-    background-image: url("./首頁新品.png");
-    background-size: cover;
-
+    @media (width <= 768px) {
+      height: 250px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top right;
+      @media (width <= 768px) {
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
     div.banner-title {
       position: absolute;
       text-align: center;
-      top: 100px;
-      right: 340px;
+      top: 70px;
+      right: 380px;
+      @media (width <= 768px) {
+        right: 35px;
+        top: 70px;
+      }
       h1 {
         text-align: start;
         width: 250px;
@@ -806,6 +876,10 @@ body.about {
         font-size: 35px;
         font-weight: normal;
         position: relative;
+        @media (width <= 768px) {
+          font-size: 20px;
+          width: 130px;
+        }
         &:first-of-type::after {
           content: "";
           position: absolute;
@@ -814,6 +888,11 @@ body.about {
           height: 2px;
           bottom: -15px;
           right: 30px;
+          @media (width <= 768px) {
+            width: 100px;
+            bottom: -10px;
+            right: 15px;
+          }
         }
         //border: 2px solid red;
         &:last-of-type {
@@ -949,11 +1028,11 @@ body {
     form {
       border-radius: 20px;
       margin: auto;
-      margin-top: 10px;
+      margin-top: 5px;
       padding-top: 10px;
       z-index: 11;
       width: 50%;
-      height: 45%;
+      height: 42%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -963,6 +1042,11 @@ body {
       @media (width<=768px) {
         width: 90%;
         height: 33%;
+      }
+      @media (width<=450px) {
+        margin-top: 20px;
+        width: 90%;
+        height: 31%;
       }
       div#cross {
         text-align: center;
@@ -980,13 +1064,13 @@ body {
       .join-input {
         //border: 2px solid red;
         width: 50%;
-        margin: 10px 0;
+        margin: 5px 0;
         flex-wrap: wrap;
         @media (width<=768px) {
           width: 80%;
         }
         label {
-          font-size: 20px;
+          font-size: 18px;
           @media (width<=768px) {
             font-size: 16px;
           }
@@ -1015,6 +1099,9 @@ body {
           padding: 10px;
           margin-top: 10px;
           width: 100%;
+          &::placeholder {
+            // color: #a8cc05;
+          }
         }
       }
       a {
@@ -1036,7 +1123,7 @@ body {
           width: 80%;
         }
         p {
-          font-size: 20px;
+          font-size: 18px;
           margin-bottom: 10px;
           @media (width<=768px) {
             font-size: 16px;
@@ -1258,6 +1345,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (width<=768px) {
+      margin-bottom: 50px;
+    }
+
     h2 {
       font-weight: normal;
       letter-spacing: 5px;
@@ -1266,20 +1357,31 @@ body {
       height: 20%;
       text-align: center;
       font-size: $titleSize;
+      margin-bottom: 20px;
+      @media (width<=768px) {
+        width: 70%;
+        font-size: 20px;
+        letter-spacing: 3px;
+      }
     }
     .location-info {
-      //border: 3px solid black;
-      width: 60%;
+      width: 70%;
       display: flex;
-      height: 80%;
-      // @media (width<=768px) {
-      //   display: flex;
-      //   flex-direction: column;
-      //   align-items: center;
-      // }
+      height: 500px;
+      @media (width<=768px) {
+        //border: 3px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 350px;
+      }
       iframe {
         width: 60%;
         height: 100%;
+        @media (width<=768px) {
+          width: 80%;
+        }
       }
       ul {
         margin-left: 30px;
@@ -1288,10 +1390,22 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        flex-wrap: wrap;
         justify-content: space-evenly;
+        @media (width<=768px) {
+          flex-direction: row;
+          justify-content: center;
+          width: 80%;
+          //border: 2px solid red;
+        }
         li {
           list-style: none;
           display: flex;
+          @media (width<=768px) {
+            width: 100%;
+            margin-top: 20px;
+            //border: 2px solid red;
+          }
           i {
             text-align: center;
             width: 20px;
@@ -1302,6 +1416,9 @@ body {
           }
           p {
             font-size: 18px;
+            @media (width<=768px) {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -1314,6 +1431,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (width<=768px) {
+      //border: 2px solid red;
+      margin: 150px 0px 20px 0px;
+    }
     h2 {
       font-weight: normal;
       letter-spacing: 5px;
@@ -1322,6 +1443,11 @@ body {
       height: 20%;
       text-align: center;
       font-size: $titleSize;
+      @media (width<=768px) {
+        width: 50%;
+        font-size: 20px;
+        letter-spacing: 3px;
+      }
     }
     div.input-group {
       background-color: rgb(211, 219, 211);
@@ -1333,11 +1459,18 @@ body {
       align-items: center;
       width: 50%;
       //border: 3px solid red;
+      @media (width<=768px) {
+        width: 90%;
+        //border: 2px solid red;
+      }
       .input {
         margin: 10px 0;
         //border: 2px solid blue;
         width: 60%;
         flex-wrap: wrap;
+        @media (width<=768px) {
+          width: 80%;
+        }
         label {
           font-size: 16px;
         }
@@ -1355,6 +1488,9 @@ body {
         //border: 2px solid blue;
         width: 60%;
         flex-wrap: wrap;
+        @media (width<=768px) {
+          width: 80%;
+        }
         label {
           font-size: 16px;
         }
@@ -1380,6 +1516,9 @@ body {
       padding: 5px;
       border-radius: 30px;
       transition: all 0.3s linear;
+      @media (width<=768px) {
+        width: 60%;
+      }
       &:hover {
         color: #000;
         background-color: #fff;
@@ -1396,9 +1535,6 @@ body {
     align-items: center;
     width: 100%;
     height: 500px;
-    @media (width <= 768px) {
-      border: 2px solid red;
-    }
     div.login-group {
       background-color: $bgc;
       border-radius: 20px;
@@ -1703,6 +1839,7 @@ body.product {
           text-align: center;
           font-size: 20px;
           padding: 11px;
+          cursor: pointer;
         }
       }
       //product-card-group RWD
