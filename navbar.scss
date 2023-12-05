@@ -923,6 +923,9 @@ body.about {
       width: 28%;
       text-align: center;
       padding-top: 20px;
+      @media (width <= 768px) {
+        width: 80%;
+      }
     }
     .precess-group {
       background-image: url("./paper.png");
@@ -932,7 +935,12 @@ body.about {
       justify-content: center;
       align-items: center;
       width: 70%;
-      //border: 2px solid blue;
+      flex-wrap: wrap;
+      @media (width <= 768px) {
+        border: 2px solid blue;
+        width: 100%;
+      }
+
       gap: 75px;
       .process-box {
         display: flex;
@@ -945,6 +953,10 @@ body.about {
         border-radius: 50%;
         position: relative;
         background-color: $bgc;
+        @media (width <= 768px) {
+          width: 40px;
+          height: 40px;
+        }
         & + div::before {
           content: "";
           position: absolute;
@@ -963,6 +975,9 @@ body.about {
         h3 {
           font-weight: normal;
           font-size: 16px;
+          @media (width <= 768px) {
+            font-size: 14px;
+          }
         }
       }
     }

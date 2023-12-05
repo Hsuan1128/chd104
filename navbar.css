@@ -918,6 +918,11 @@ body.about div.process h2 {
   text-align: center;
   padding-top: 20px;
 }
+@media (width <= 768px) {
+  body.about div.process h2 {
+    width: 80%;
+  }
+}
 body.about div.process .precess-group {
   background-image: url("./paper.png");
   background-color: #eee;
@@ -926,7 +931,14 @@ body.about div.process .precess-group {
   justify-content: center;
   align-items: center;
   width: 70%;
+  flex-wrap: wrap;
   gap: 75px;
+}
+@media (width <= 768px) {
+  body.about div.process .precess-group {
+    border: 2px solid blue;
+    width: 100%;
+  }
 }
 body.about div.process .precess-group .process-box {
   display: flex;
@@ -939,6 +951,12 @@ body.about div.process .precess-group .process-box {
   border-radius: 50%;
   position: relative;
   background-color: #eee;
+}
+@media (width <= 768px) {
+  body.about div.process .precess-group .process-box {
+    width: 40px;
+    height: 40px;
+  }
 }
 body.about div.process .precess-group .process-box + div::before {
   content: "";
@@ -958,6 +976,11 @@ body.about div.process .precess-group .process-box i {
 body.about div.process .precess-group .process-box h3 {
   font-weight: normal;
   font-size: 16px;
+}
+@media (width <= 768px) {
+  body.about div.process .precess-group .process-box h3 {
+    font-size: 14px;
+  }
 }
 body.about main.main-process {
   background-image: url("./paper.png");
