@@ -53,16 +53,19 @@ body {
       background-color: $bgc;
       background-image: url("./paper.png");
       position: absolute;
-      //border: 2px solid red;
       right: 0;
       top: 100%;
-      height: 60vh;
+      height: 55vh;
       width: 100%;
       display: none;
       flex-wrap: wrap;
-      overflow: hidden;
+      border-bottom: 1px solid $textColor;
+
+      transition: all 0.3s linear;
       @media (width <= 768px) {
         display: block;
+        left: -100%;
+        opacity: 0;
       }
 
       ul {
@@ -70,6 +73,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        margin-top: 20px;
         li {
           //border: 2px solid green;
           display: flex;
@@ -105,9 +109,10 @@ body {
     input#menu-switch {
       position: absolute;
       display: none;
-    }
-    input#menu-switch:checked ~ .title .hb-nav {
-      display: none;
+      &:checked + .hb-nav {
+        left: 0;
+        opacity: 1;
+      }
     }
     nav {
       //border: 2px solid blue;
