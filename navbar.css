@@ -47,10 +47,12 @@ body header.title nav.hb-nav {
   right: 0;
   top: 100%;
   height: 55vh;
-  width: 100%;
+  width: 80%;
   display: none;
   flex-wrap: wrap;
-  border-bottom: 1px solid #a8cc05;
+  border-radius: 0 0 30px 0;
+  border-bottom: 2px solid #a8cc05;
+  border-right: 2px solid #a8cc05;
   transition: all 0.3s linear;
 }
 @media (width <= 768px) {
@@ -105,6 +107,7 @@ body header.title input#menu-switch {
 body header.title input#menu-switch:checked + .hb-nav {
   left: 0;
   opacity: 1;
+  overflow: hidden;
 }
 body header.title nav {
   padding-bottom: 10px;
@@ -936,8 +939,8 @@ body.about div.process .precess-group {
 }
 @media (width <= 768px) {
   body.about div.process .precess-group {
-    border: 2px solid blue;
     width: 100%;
+    gap: 20px;
   }
 }
 body.about div.process .precess-group .process-box {
@@ -954,8 +957,8 @@ body.about div.process .precess-group .process-box {
 }
 @media (width <= 768px) {
   body.about div.process .precess-group .process-box {
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
   }
 }
 body.about div.process .precess-group .process-box + div::before {
@@ -969,9 +972,21 @@ body.about div.process .precess-group .process-box + div::before {
   bottom: 0;
   margin: auto;
 }
+@media (width <= 768px) {
+  body.about div.process .precess-group .process-box + div::before {
+    width: 20px;
+    left: -22px;
+  }
+}
 body.about div.process .precess-group .process-box i {
   font-size: 35px;
   margin-bottom: 20px;
+}
+@media (width <= 768px) {
+  body.about div.process .precess-group .process-box i {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 body.about div.process .precess-group .process-box h3 {
   font-weight: normal;
@@ -979,7 +994,7 @@ body.about div.process .precess-group .process-box h3 {
 }
 @media (width <= 768px) {
   body.about div.process .precess-group .process-box h3 {
-    font-size: 14px;
+    font-size: 8px;
   }
 }
 body.about main.main-process {
@@ -991,6 +1006,11 @@ body.about main.main-process {
   width: 100%;
   margin: 50px 0;
 }
+@media (width <= 768px) {
+  body.about main.main-process {
+    margin: 20px 0;
+  }
+}
 body.about main.main-process .main-process-info {
   flex-wrap: wrap;
   display: flex;
@@ -998,12 +1018,28 @@ body.about main.main-process .main-process-info {
   height: 250px;
   margin: 20px 0px;
 }
+@media (width <= 768px) {
+  body.about main.main-process .main-process-info {
+    align-items: center;
+    flex-direction: column;
+    height: 450px;
+    width: 100%;
+  }
+}
 body.about main.main-process .main-process-info img {
   border-radius: 20px;
   flex: 1;
   width: 100%;
   height: 250px;
   vertical-align: middle;
+}
+@media (width <= 768px) {
+  body.about main.main-process .main-process-info img {
+    width: 80%;
+    height: 150px;
+    order: -1;
+    margin-bottom: 10px;
+  }
 }
 body.about main.main-process .main-process-info .text {
   display: flex;
@@ -1020,12 +1056,22 @@ body.about main.main-process .main-process-info .text h2 {
   height: 40px;
   border-bottom: 3px solid #a8cc05;
 }
+@media (width <= 768px) {
+  body.about main.main-process .main-process-info .text h2 {
+    margin-bottom: 20px;
+  }
+}
 body.about main.main-process .main-process-info .text p {
   color: #555;
   width: 90%;
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 1.5rem;
+}
+@media (width <= 768px) {
+  body.about main.main-process .main-process-info .text p {
+    width: 80%;
+  }
 }
 
 body {
