@@ -38,8 +38,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
-
-    //border: 2px solid red;
     justify-content: center;
     align-items: center;
     background-image: url("./paper.png");
@@ -53,15 +51,13 @@ body {
       background-color: $bgc;
       background-image: url("./paper.png");
       position: absolute;
-      right: 0;
       top: 100%;
-      height: 55vh;
-      width: 80%;
+      height: 100vh;
+      width: 100%;
       display: none;
       flex-wrap: wrap;
       border-radius: 0 0 30px 0;
-      border-bottom: 2px solid $textColor;
-      border-right: 2px solid $textColor;
+      overflow: hidden;
       transition: all 0.3s linear;
       @media (width <= 768px) {
         display: block;
@@ -95,7 +91,6 @@ body {
       margin: auto;
       width: 60px;
       height: 60px;
-      background-color: $bgc2;
       display: none;
       text-align: center;
       padding-top: 10px;
@@ -111,9 +106,8 @@ body {
       position: absolute;
       display: none;
       &:checked + .hb-nav {
-        left: 0;
+        left: 0px;
         opacity: 1;
-        overflow: hidden;
       }
     }
     nav {
@@ -153,6 +147,9 @@ body {
         &:hover::after {
           right: 0;
           left: 0;
+          @media (width <= 768px) {
+            display: none;
+          }
         }
         &:hover {
           transform: translateY(-3px);
@@ -191,7 +188,6 @@ body {
     background-color: #eee;
     width: 100%;
     height: 350px;
-    //border: 1px solid red;
     position: relative;
     img {
       width: 100%;
@@ -329,16 +325,14 @@ body {
     justify-content: center;
     width: 100%;
     height: 500px;
-    border: 3px solid red;
     @media (width <= 768px) {
       align-items: center;
     }
     div.about-text {
       position: relative;
-
       width: 33%;
       @media (width <= 768px) {
-        width: 100%;
+        width: 90%;
       }
       h2 {
         font-weight: normal;
@@ -419,11 +413,18 @@ body {
     width: 100%;
     height: 350px;
     background-color: rgba(0, 0, 0, 0.7);
+    @media (width <= 768px) {
+      background-color: $bgc;
+      background-image: url("./paper.png");
+    }
     div.flex-select {
       width: 70%;
       border: 1px solid $textColor;
       height: 350px;
       display: flex;
+      @media (width <= 768px) {
+        flex-direction: column;
+      }
 
       div.select {
         flex: 1 0 20%;
@@ -435,6 +436,9 @@ body {
         border-right: 1px solid $textColor;
         border-collapse: collapse;
         transition: all 0.4s linear;
+        @media (width <= 768px) {
+          flex-direction: row;
+        }
         i {
           color: $textColor;
           font-size: 60px;
@@ -447,6 +451,10 @@ body {
           visibility: hidden;
           transition: all 0.3s linear;
           opacity: 0;
+          @media (width <= 768px) {
+            visibility: visible;
+            border: 2px solid red;
+          }
         }
 
         &:hover {
@@ -523,7 +531,7 @@ body {
       border-radius: 30px;
       transition: all 0.3s linear;
       @media (width <= 768px) {
-        width: 100%;
+        width: 100px;
       }
       &:hover {
         background-color: #fff;
@@ -543,6 +551,9 @@ body {
     flex-wrap: wrap;
     width: 100%;
     height: 200px;
+    @media (width <= 768px) {
+      height: 350px;
+    }
     h2 {
       font-weight: normal;
       width: 140px;
@@ -565,6 +576,10 @@ body {
         padding: 0 5px;
         height: 35px;
         margin: 20px 20px 20px 0px;
+        @media (width <= 768px) {
+          width: 93%;
+          margin: 10px 20px 10px 0px;
+        }
         &:focus {
           outline: none;
         }
@@ -590,6 +605,11 @@ body {
         color: #fff;
         text-decoration: none;
         transition: all 0.3s linear;
+        @media (width <= 768px) {
+          width: 100px;
+          right: 50px;
+          bottom: -40px;
+        }
         &:hover {
           background-color: #fff;
           color: #000;
@@ -610,21 +630,18 @@ body {
 
     div.footer-info {
       display: flex;
-      //justify-content: space-around;
       align-items: center;
       border-bottom: 1px solid #999;
       @media (width <= 768px) {
         flex-direction: column;
       }
       .img {
-        //border: 2px solid blue;
         width: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
         @media (width <= 768px) {
           width: 100%;
-          // border: 2px solid red;
         }
         img {
           width: 120px;
@@ -638,22 +655,18 @@ body {
 
       div.info {
         width: 50%;
-        //border: 2px solid red;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        // align-items: center;
         @media (width <= 768px) {
           width: 100%;
-          //border: 1px solid red;
         }
         div.breadcrumb {
           display: flex;
           justify-content: center;
           @media (width <= 768px) {
             width: 100%;
-            //border: 1px solid red;
           }
           span {
             font-size: 16px;
@@ -685,7 +698,6 @@ body {
         align-items: flex-start;
         width: 25%;
         height: 100%;
-        //border: 2px solid green;
         @media (width <=768px) {
           display: flex;
           width: 100%;
@@ -713,7 +725,6 @@ body {
     background-color: #eee;
     width: 100%;
     height: 300px;
-    //border: 1px solid red;
     position: relative;
     background-image: url("./tea\ garden.jpg");
     background-size: cover;
@@ -728,7 +739,6 @@ body {
       transform: translate(-50%, 50%);
       text-align: center;
       border-radius: 20px;
-      // background-color: rgba(0, 0, 0, 0.5);
       h1 {
         color: #fff;
         font-size: $h1titleSize;

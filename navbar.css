@@ -44,15 +44,13 @@ body header.title nav.hb-nav {
   background-color: #eee;
   background-image: url("./paper.png");
   position: absolute;
-  right: 0;
   top: 100%;
-  height: 55vh;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
   display: none;
   flex-wrap: wrap;
   border-radius: 0 0 30px 0;
-  border-bottom: 2px solid #a8cc05;
-  border-right: 2px solid #a8cc05;
+  overflow: hidden;
   transition: all 0.3s linear;
 }
 @media (width <= 768px) {
@@ -86,7 +84,6 @@ body header.title label.hb {
   margin: auto;
   width: 60px;
   height: 60px;
-  background-color: rgb(211, 219, 211);
   display: none;
   text-align: center;
   padding-top: 10px;
@@ -105,9 +102,8 @@ body header.title input#menu-switch {
   display: none;
 }
 body header.title input#menu-switch:checked + .hb-nav {
-  left: 0;
+  left: 0px;
   opacity: 1;
-  overflow: hidden;
 }
 body header.title nav {
   padding-bottom: 10px;
@@ -149,6 +145,11 @@ body header.title nav a::after {
 body header.title nav a:hover::after {
   right: 0;
   left: 0;
+}
+@media (width <= 768px) {
+  body header.title nav a:hover::after {
+    display: none;
+  }
 }
 body header.title nav a:hover {
   transform: translateY(-3px);
@@ -335,7 +336,6 @@ body div.font-about {
   justify-content: center;
   width: 100%;
   height: 500px;
-  border: 3px solid red;
 }
 @media (width <= 768px) {
   body div.font-about {
@@ -348,7 +348,7 @@ body div.font-about div.about-text {
 }
 @media (width <= 768px) {
   body div.font-about div.about-text {
-    width: 100%;
+    width: 90%;
   }
 }
 body div.font-about div.about-text h2 {
@@ -438,11 +438,22 @@ body div.filter {
   height: 350px;
   background-color: rgba(0, 0, 0, 0.7);
 }
+@media (width <= 768px) {
+  body div.filter {
+    background-color: #eee;
+    background-image: url("./paper.png");
+  }
+}
 body div.filter div.flex-select {
   width: 70%;
   border: 1px solid #a8cc05;
   height: 350px;
   display: flex;
+}
+@media (width <= 768px) {
+  body div.filter div.flex-select {
+    flex-direction: column;
+  }
 }
 body div.filter div.flex-select div.select {
   flex: 1 0 20%;
@@ -454,6 +465,11 @@ body div.filter div.flex-select div.select {
   border-right: 1px solid #a8cc05;
   border-collapse: collapse;
   transition: all 0.4s linear;
+}
+@media (width <= 768px) {
+  body div.filter div.flex-select div.select {
+    flex-direction: row;
+  }
 }
 body div.filter div.flex-select div.select i {
   color: #a8cc05;
@@ -467,6 +483,12 @@ body div.filter div.flex-select div.select p {
   visibility: hidden;
   transition: all 0.3s linear;
   opacity: 0;
+}
+@media (width <= 768px) {
+  body div.filter div.flex-select div.select p {
+    visibility: visible;
+    border: 2px solid red;
+  }
 }
 body div.filter div.flex-select div.select:hover {
   flex: 2 0 40%;
@@ -546,7 +568,7 @@ body div.news a.news-more-info {
 }
 @media (width <= 768px) {
   body div.news a.news-more-info {
-    width: 100%;
+    width: 100px;
   }
 }
 body div.news a.news-more-info:hover {
@@ -564,6 +586,11 @@ body div.store-search {
   flex-wrap: wrap;
   width: 100%;
   height: 200px;
+}
+@media (width <= 768px) {
+  body div.store-search {
+    height: 350px;
+  }
 }
 body div.store-search h2 {
   font-weight: normal;
@@ -586,6 +613,12 @@ body div.store-search div.input-group input {
   padding: 0 5px;
   height: 35px;
   margin: 20px 20px 20px 0px;
+}
+@media (width <= 768px) {
+  body div.store-search div.input-group input {
+    width: 93%;
+    margin: 10px 20px 10px 0px;
+  }
 }
 body div.store-search div.input-group input:focus {
   outline: none;
@@ -614,6 +647,13 @@ body div.store-search div.input-group a {
   color: #fff;
   text-decoration: none;
   transition: all 0.3s linear;
+}
+@media (width <= 768px) {
+  body div.store-search div.input-group a {
+    width: 100px;
+    right: 50px;
+    bottom: -40px;
+  }
 }
 body div.store-search div.input-group a:hover {
   background-color: #fff;
