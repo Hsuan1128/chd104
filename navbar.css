@@ -88,22 +88,56 @@ body header.title label.hb {
   text-align: center;
   padding-top: 10px;
 }
+body header.title label.hb span {
+  display: inline-block;
+  width: 60%;
+  height: 4px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #a8cc05;
+  position: relative;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+  top: 0;
+}
+body header.title label.hb span:first-child {
+  margin-top: 12px;
+}
+body header.title label.hb span:last-child {
+  margin-bottom: 10px;
+}
 body header.title label.hb i {
   font-size: 40px;
   color: #555;
 }
 @media (width <= 768px) {
   body header.title label.hb {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
   }
 }
 body header.title input#menu-switch {
   position: absolute;
   display: none;
 }
-body header.title input#menu-switch:checked + .hb-nav {
+body header.title input#menu-switch:checked ~ .hb-nav {
   left: 0px;
   opacity: 1;
+}
+body header.title input#menu-switch:checked + .hb span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+body header.title input#menu-switch:checked + .hb span:nth-child(2) {
+  display: none;
+}
+body header.title input#menu-switch:checked + .hb span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: -10px;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 }
 body header.title nav {
   padding-bottom: 10px;
