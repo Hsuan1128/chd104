@@ -431,7 +431,7 @@ body div.font-about div.about-text a {
 @media (width <= 768px) {
   body div.font-about div.about-text a {
     bottom: -50px;
-    right: 10px;
+    right: 0px;
     padding-top: 6px;
     width: 100px;
     font-size: 14px;
@@ -487,6 +487,7 @@ body div.filter div.flex-select {
 @media (width <= 768px) {
   body div.filter div.flex-select {
     flex-direction: column;
+    border: transparent;
   }
 }
 body div.filter div.flex-select div.select {
@@ -503,6 +504,9 @@ body div.filter div.flex-select div.select {
 @media (width <= 768px) {
   body div.filter div.flex-select div.select {
     flex-direction: row;
+    justify-content: flex-start;
+    border-left: transparent;
+    border-right: transparent;
   }
 }
 body div.filter div.flex-select div.select i {
@@ -510,6 +514,12 @@ body div.filter div.flex-select div.select i {
   font-size: 60px;
   transition: all 0.3s linear;
   transform: translateY(0);
+}
+@media (width <= 768px) {
+  body div.filter div.flex-select div.select i {
+    font-size: 30px;
+    margin-right: 20px;
+  }
 }
 body div.filter div.flex-select div.select p {
   color: #a8cc05;
@@ -521,7 +531,9 @@ body div.filter div.flex-select div.select p {
 @media (width <= 768px) {
   body div.filter div.flex-select div.select p {
     visibility: visible;
-    border: 2px solid red;
+    opacity: 1;
+    font-size: 16px;
+    color: #666;
   }
 }
 body div.filter div.flex-select div.select:hover {
@@ -602,7 +614,12 @@ body div.news a.news-more-info {
 }
 @media (width <= 768px) {
   body div.news a.news-more-info {
+    bottom: 20px;
+    right: 20px;
+    padding-top: 6px;
     width: 100px;
+    font-size: 14px;
+    height: 30px;
   }
 }
 body div.news a.news-more-info:hover {
@@ -684,9 +701,12 @@ body div.store-search div.input-group a {
 }
 @media (width <= 768px) {
   body div.store-search div.input-group a {
+    bottom: -50px;
+    right: -45px;
+    padding-top: 6px;
     width: 100px;
-    right: 50px;
-    bottom: -40px;
+    font-size: 14px;
+    height: 30px;
   }
 }
 body div.store-search div.input-group a:hover {
