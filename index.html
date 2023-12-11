@@ -24,7 +24,8 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    <!-- JQuery -->
+    <script src="../chd104/JS/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="./navbar.css" />
   </head>
   <body>
@@ -61,16 +62,39 @@
         <a href="./login.html">會員登入</a>
       </nav>
     </header>
-    <div class="banner">
-      <img src="./font.png" alt="font" />
-      <div class="banner-title">
-        <h1>當季限定</h1>
-        <h1>金萱烏龍</h1>
-        <p>
-          「青心金萱，選用最嫩的新芽和嫩葉，經精心採摘後展開其優雅姿態。茶葉條索緊緻，傳遞著茶山的生機，呈現濃郁翠綠，如同大地的靈氣凝聚。」
-        </p>
-      </div>
+
+    <div id="slider">
+      <ul id="slider-content">
+        <li>
+          <img src="./font.png" alt="font" />
+          <div class="banner-title">
+            <h1>當季限定</h1>
+            <h1>金萱烏龍</h1>
+            <p>
+              「青心金萱，選用最嫩的新芽和嫩葉，經精心採摘後展開其優雅姿態。茶葉條索緊緻，傳遞著茶山的生機，呈現濃郁翠綠，如同大地的靈氣凝聚。」
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="./teatop3.png" alt="font" />
+          <div class="banner-title">
+            <!-- <h1></h1>
+            <h1></h1>
+            <p></p> -->
+          </div>
+        </li>
+        <li>
+          <img src="./font-mem.jpg" alt="font" />
+          <div class="banner-title">
+            <!-- <h1></h1>
+            <h1></h1>
+            <p></p> -->
+          </div>
+        </li>
+      </ul>
+      <ul id="contentButton"></ul>
     </div>
+
     <div class="sale">
       <div class="sale-title">
         <h2>好評必喝推薦</h2>
@@ -188,6 +212,6 @@
       </div>
     </footer>
 
-    <script src="./navbar.js"></script>
+    <script src="./fontPage.js"></script>
   </body>
 </html>

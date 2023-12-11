@@ -216,39 +216,53 @@ body header.title div.nav-img img {
     margin-left: 10px;
   }
 }
-body div.banner {
+body div#slider {
   background-color: #eee;
   width: 100%;
   height: 350px;
+  overflow: hidden;
   position: relative;
 }
-body div.banner img {
-  width: 100%;
+body div#slider ul#slider-content {
+  position: relative;
   height: 100%;
+  display: flex;
+}
+body div#slider ul#slider-content li {
+  width: 100%;
+  list-style: none;
+}
+body div#slider ul#slider-content li img {
+  width: 1920px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: -100px;
+     object-position: -100px;
 }
 @media (width <= 768px) {
-  body div.banner img {
+  body div#slider ul#slider-content li img {
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: -550px;
        object-position: -550px;
   }
 }
-body div.banner div.banner-title {
+body div#slider ul#slider-content li div.banner-title {
   position: absolute;
-  top: 40px;
-  right: 520px;
-  width: 40%;
+  top: 50px;
+  left: 480px;
+  width: 50%;
   height: 80%;
 }
 @media (width <= 768px) {
-  body div.banner div.banner-title {
+  body div#slider ul#slider-content li div.banner-title {
     right: 15px;
     width: 90%;
     top: 180px;
   }
 }
-body div.banner div.banner-title h1 {
+body div#slider ul#slider-content li div.banner-title h1 {
   letter-spacing: 5px;
   color: #000;
   font-size: 35px;
@@ -256,11 +270,11 @@ body div.banner div.banner-title h1 {
   position: relative;
 }
 @media (width <= 768px) {
-  body div.banner div.banner-title h1 {
+  body div#slider ul#slider-content li div.banner-title h1 {
     font-size: 20px;
   }
 }
-body div.banner div.banner-title h1:first-child::after {
+body div#slider ul#slider-content li div.banner-title h1:first-child::after {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -270,24 +284,46 @@ body div.banner div.banner-title h1:first-child::after {
   width: 200px;
 }
 @media (width <= 768px) {
-  body div.banner div.banner-title h1:first-child::after {
+  body div#slider ul#slider-content li div.banner-title h1:first-child::after {
     width: 150px;
     bottom: -10px;
   }
 }
-body div.banner div.banner-title h1:last-of-type {
+body div#slider ul#slider-content li div.banner-title h1:last-of-type {
   padding-left: 30px;
 }
-body div.banner div.banner-title p {
+body div#slider ul#slider-content li div.banner-title p {
+  width: 30%;
   color: #666;
   margin-top: 50px;
   font-size: 18px;
+  font-weight: lighter;
+  line-height: 2rem;
 }
 @media (width <= 768px) {
-  body div.banner div.banner-title p {
+  body div#slider ul#slider-content li div.banner-title p {
     margin-top: 20px;
     font-size: 14px;
   }
+}
+body div#slider ul#contentButton {
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  position: relative;
+  margin: auto;
+  top: -40px;
+}
+body div#slider ul#contentButton li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #ccc;
+  margin: 8px;
+}
+body div#slider ul#contentButton li.clicked {
+  background-color: #a8cc05;
 }
 body div.sale {
   background-color: #eee;

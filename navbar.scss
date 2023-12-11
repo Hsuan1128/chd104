@@ -217,67 +217,101 @@ body {
     }
   }
 
-  div.banner {
+  div#slider {
     background-color: #eee;
     width: 100%;
     height: 350px;
+    overflow: hidden;
     position: relative;
-    img {
-      width: 100%;
+    ul#slider-content {
+      position: relative;
       height: 100%;
-      @media (width <= 768px) {
-        object-fit: cover;
-        object-position: -550px;
-        //x左右 y上下
-      }
-    }
-    div.banner-title {
-      //border: 2px solid black;
-      position: absolute;
-      top: 40px;
-      right: 520px;
-      width: 40%;
-      height: 80%;
-      @media (width <= 768px) {
-        right: 15px;
-        width: 90%;
-        top: 180px;
-      }
-      h1 {
-        letter-spacing: 5px;
-        color: #000;
-        font-size: $h1titleSize;
-        font-weight: normal;
-        position: relative;
-        @media (width <= 768px) {
-          font-size: 20px;
-        }
-        &:first-child::after {
-          content: "";
-          position: absolute;
-          bottom: -15px;
-          left: 0;
-          background-color: $textColor;
-          height: 2px;
-          width: 200px;
+      display: flex;
+      li {
+        width: 100%;
+        // border: 2px solid red;
+        list-style: none;
+        img {
+          width: 1920px;
+          height: 100%;
+          object-fit: cover;
+          object-position: -100px;
           @media (width <= 768px) {
-            width: 150px;
-            bottom: -10px;
+            object-fit: cover;
+            object-position: -550px;
+            //x左右 y上下
           }
         }
-        &:last-of-type {
-          padding-left: 30px;
+        div.banner-title {
+          position: absolute;
+          top: 50px;
+          left: 480px;
+          width: 50%;
+          height: 80%;
+          @media (width <= 768px) {
+            right: 15px;
+            width: 90%;
+            top: 180px;
+          }
+          h1 {
+            letter-spacing: 5px;
+            color: #000;
+            font-size: $h1titleSize;
+            font-weight: normal;
+            position: relative;
+            @media (width <= 768px) {
+              font-size: 20px;
+            }
+            &:first-child::after {
+              content: "";
+              position: absolute;
+              bottom: -15px;
+              left: 0;
+              background-color: $textColor;
+              height: 2px;
+              width: 200px;
+              @media (width <= 768px) {
+                width: 150px;
+                bottom: -10px;
+              }
+            }
+            &:last-of-type {
+              padding-left: 30px;
+            }
+          }
+          p {
+            width: 30%;
+            color: #666;
+            margin-top: 50px;
+            font-size: 18px;
+            font-weight: lighter;
+            line-height: 2rem;
+            @media (width <= 768px) {
+              //border: 2px solid green;
+              margin-top: 20px;
+              font-size: 14px;
+            }
+          }
         }
       }
-      p {
-        color: #666;
-        margin-top: 50px;
-        font-size: 18px;
-        @media (width <= 768px) {
-          //border: 2px solid green;
-          margin-top: 20px;
-          font-size: 14px;
-        }
+    }
+    ul#contentButton {
+      text-align: center;
+      width: 300px;
+      height: 50px;
+      position: relative;
+      margin: auto;
+      top: -40px;
+      li {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #ccc;
+        margin: 8px;
+      }
+      li.clicked {
+        background-color: $textColor;
       }
     }
   }
