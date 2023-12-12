@@ -25,7 +25,8 @@
       rel="stylesheet"
     />
     <!-- JQuery -->
-    <script src="../chd104/JS/jquery-3.7.1.js"></script>
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="./navbar.css" />
   </head>
   <body>
@@ -76,19 +77,20 @@
           </div>
         </li>
         <li>
-          <img src="./teatop3.png" alt="font" />
-          <div class="banner-title">
-            <!-- <h1></h1>
-            <h1></h1>
-            <p></p> -->
+          <img src="./tea garden.jpg" alt="font" />
+          <div class="active-banner">
+            <h1>體驗活動</h1>
+            <p>
+              親身體驗採摘茶葉的過程。您將有機會了解茶葉的種植、收穫和製作過程，
+              以及對環境的尊重。
+            </p>
           </div>
         </li>
         <li>
-          <img src="./font-mem.jpg" alt="font" />
-          <div class="banner-title">
-            <!-- <h1></h1>
-            <h1></h1>
-            <p></p> -->
+          <img src="./font-mem.jpg" alt="member" />
+          <div class="member-banner">
+            <h1>會員日</h1>
+            <p>每月15日，指定品項買一送一。</p>
           </div>
         </li>
       </ul>
@@ -96,25 +98,42 @@
     </div>
 
     <div class="sale">
+      <button id="right"><i class="fa-solid fa-angle-right"></i></button>
+      <button id="left" disabled><i class="fa-solid fa-angle-left"></i></button>
+
       <div class="sale-title">
         <h2>好評必喝推薦</h2>
       </div>
       <div class="sale-card">
-        <div class="card">
-          <img src="./飲料圖片/黑糖.jpg" alt="黑糖" />
-          <h3>黑糖珍珠鮮奶</h3>
-        </div>
-        <div class="card">
-          <img src="./飲料圖片/奶蓋.jpg" alt="奶蓋" />
-          <h3>奶蓋綠茶</h3>
-        </div>
-        <div class="card">
-          <img src="./飲料圖片/烏龍茶.jpg" alt="烏龍茶" />
-          <h3>琥珀烏龍</h3>
-        </div>
-        <div class="card">
-          <img src="./飲料圖片/抹茶那堤.jpg" alt="抹茶" />
-          <h3>抹茶那堤</h3>
+        <div class="card-slide" style="left: 0">
+          <div class="card">
+            <img src="./飲料圖片/黑糖.jpg" alt="黑糖" />
+            <h3>黑糖珍珠鮮奶</h3>
+          </div>
+          <div class="card">
+            <img src="./飲料圖片/奶蓋.jpg" alt="奶蓋" />
+            <h3>奶蓋綠茶</h3>
+          </div>
+          <div class="card">
+            <img src="./飲料圖片/烏龍茶.jpg" alt="烏龍茶" />
+            <h3>琥珀烏龍</h3>
+          </div>
+          <div class="card">
+            <img src="./飲料圖片/抹茶那堤.jpg" alt="抹茶" />
+            <h3>抹茶那堤</h3>
+          </div>
+          <div class="card">
+            <img src="./飲料圖片/red tea lette.jpg" alt="紅茶拿鐵" />
+            <h3>紅茶拿鐵</h3>
+          </div>
+          <div class="card">
+            <img src="./飲料圖片/apple.jpg" alt="蘋果金萱" />
+            <h3>蘋果金萱</h3>
+          </div>
+          <div class="card">
+            <img src="./飲料圖片/green.jpg" alt="奶蓋綠茶" />
+            <h3>奶蓋綠茶</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -188,10 +207,10 @@
         </div>
         <div class="info">
           <div class="breadcrumb">
-            <span>客服電話</span>
-            <span>商品列表</span>
-            <span>收到最新消息</span>
-            <span>加盟Tea Select</span>
+            <a href="./location.html">客服電話</a>
+            <a href="./product.html">商品列表</a>
+            <a href="./news.html">收到最新消息</a>
+            <a href="./join.html">加盟Tea Select</a>
           </div>
           <div class="info-icon">
             <i class="fa-brands fa-line"></i>

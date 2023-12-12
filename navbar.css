@@ -232,6 +232,10 @@ body div#slider ul#slider-content li {
   width: 100%;
   list-style: none;
 }
+body div#slider ul#slider-content li:nth-child(2) img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 body div#slider ul#slider-content li img {
   width: 1920px;
   height: 100%;
@@ -244,11 +248,11 @@ body div#slider ul#slider-content li img {
   body div#slider ul#slider-content li img {
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: -550px;
-       object-position: -550px;
+    -o-object-position: -600px;
+       object-position: -600px;
   }
 }
-body div#slider ul#slider-content li div.banner-title {
+body div#slider ul#slider-content li .banner-title {
   position: absolute;
   top: 50px;
   left: 480px;
@@ -256,13 +260,14 @@ body div#slider ul#slider-content li div.banner-title {
   height: 80%;
 }
 @media (width <= 768px) {
-  body div#slider ul#slider-content li div.banner-title {
-    right: 15px;
+  body div#slider ul#slider-content li .banner-title {
+    left: 20px;
+    height: 20%;
     width: 90%;
-    top: 180px;
+    top: 110px;
   }
 }
-body div#slider ul#slider-content li div.banner-title h1 {
+body div#slider ul#slider-content li .banner-title h1 {
   letter-spacing: 5px;
   color: #000;
   font-size: 35px;
@@ -270,11 +275,11 @@ body div#slider ul#slider-content li div.banner-title h1 {
   position: relative;
 }
 @media (width <= 768px) {
-  body div#slider ul#slider-content li div.banner-title h1 {
+  body div#slider ul#slider-content li .banner-title h1 {
     font-size: 20px;
   }
 }
-body div#slider ul#slider-content li div.banner-title h1:first-child::after {
+body div#slider ul#slider-content li .banner-title h1:first-child::after {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -284,16 +289,16 @@ body div#slider ul#slider-content li div.banner-title h1:first-child::after {
   width: 200px;
 }
 @media (width <= 768px) {
-  body div#slider ul#slider-content li div.banner-title h1:first-child::after {
+  body div#slider ul#slider-content li .banner-title h1:first-child::after {
     width: 150px;
     bottom: -10px;
   }
 }
-body div#slider ul#slider-content li div.banner-title h1:last-of-type {
+body div#slider ul#slider-content li .banner-title h1:last-of-type {
   padding-left: 30px;
 }
-body div#slider ul#slider-content li div.banner-title p {
-  width: 30%;
+body div#slider ul#slider-content li .banner-title p {
+  width: 32%;
   color: #666;
   margin-top: 50px;
   font-size: 18px;
@@ -301,9 +306,110 @@ body div#slider ul#slider-content li div.banner-title p {
   line-height: 2rem;
 }
 @media (width <= 768px) {
-  body div#slider ul#slider-content li div.banner-title p {
+  body div#slider ul#slider-content li .banner-title p {
+    width: 35%;
     margin-top: 20px;
     font-size: 14px;
+  }
+}
+body div#slider ul#slider-content li .active-banner {
+  position: absolute;
+  bottom: 60px;
+  right: 1650px;
+}
+@media (width <= 768px) {
+  body div#slider ul#slider-content li .active-banner {
+    left: 400px;
+    height: 20%;
+    width: 90%;
+    bottom: 180px;
+  }
+}
+body div#slider ul#slider-content li .active-banner h1 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 35px;
+}
+@media (width <= 768px) {
+  body div#slider ul#slider-content li .active-banner h1 {
+    font-size: 25px;
+  }
+}
+body div#slider ul#slider-content li .active-banner h1:after {
+  content: "";
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  background-color: #a8cc05;
+  height: 2px;
+  width: 200px;
+}
+@media (width <= 768px) {
+  body div#slider ul#slider-content li .active-banner h1:after {
+    width: 150px;
+    bottom: 10px;
+  }
+}
+body div#slider ul#slider-content li .active-banner p {
+  width: 100%;
+  color: #fff;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 2rem;
+}
+@media (width <= 768px) {
+  body div#slider ul#slider-content li .active-banner p {
+    width: 35%;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+}
+body div#slider ul#slider-content li .member-banner {
+  position: absolute;
+  right: 800px;
+  bottom: 50px;
+  width: 10%;
+}
+@media (width <= 768px) {
+  body div#slider ul#slider-content li .member-banner {
+    right: 125px;
+    bottom: 35px;
+    width: 20%;
+  }
+}
+body div#slider ul#slider-content li .member-banner h1 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 35px;
+}
+body div#slider ul#slider-content li .member-banner h1:after {
+  content: "";
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  background-color: #a8cc05;
+  height: 2px;
+  width: 200px;
+}
+@media (width <= 768px) {
+  body div#slider ul#slider-content li .member-banner h1:after {
+    width: 150px;
+    bottom: 40px;
+  }
+}
+body div#slider ul#slider-content li .member-banner p {
+  width: 100%;
+  color: #fff;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 2rem;
+}
+@media (width <= 768px) {
+  body div#slider ul#slider-content li .member-banner p {
+    margin-top: 20px;
+    font-size: 16px;
   }
 }
 body div#slider ul#contentButton {
@@ -321,6 +427,7 @@ body div#slider ul#contentButton li {
   display: inline-block;
   background-color: #ccc;
   margin: 8px;
+  cursor: pointer;
 }
 body div#slider ul#contentButton li.clicked {
   background-color: #a8cc05;
@@ -332,12 +439,47 @@ body div.sale {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 500px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 @media (width <= 768px) {
   body div.sale {
-    height: 600px;
+    height: 400px;
+    padding-top: 50px;
+  }
+}
+body div.sale #right {
+  color: #a8cc05;
+  position: absolute;
+  top: 240px;
+  right: 140px;
+  font-size: 50px;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media (width <= 768px) {
+  body div.sale #right {
+    right: 20px;
+    top: 200px;
+  }
+}
+body div.sale #left {
+  color: #a8cc05;
+  position: absolute;
+  top: 240px;
+  left: 140px;
+  font-size: 50px;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media (width <= 768px) {
+  body div.sale #left {
+    left: 20px;
+    top: 200px;
   }
 }
 body div.sale div.sale-title {
@@ -356,31 +498,41 @@ body div.sale div.sale-title h2 {
   padding-bottom: 5px;
 }
 body div.sale div.sale-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  position: relative;
+  width: 66%;
+  height: 350px;
+  overflow: hidden;
 }
 @media (width <= 768px) {
   body div.sale div.sale-card {
+    width: 52%;
     justify-content: center;
     align-items: center;
   }
 }
-body div.sale div.sale-card div.card {
+body div.sale div.sale-card div.card-slide {
+  position: absolute;
+  width: 2000px;
+  position: relative;
+  transition: left 0.5s;
+}
+body div.sale div.sale-card div.card-slide .card {
+  margin: 5px;
   width: 200px;
   height: 300px;
+  float: left;
 }
 @media (width <= 768px) {
-  body div.sale div.sale-card div.card {
-    width: 150px;
-    height: 250px;
+  body div.sale div.sale-card div.card-slide .card {
+    width: 200px;
+    height: 300px;
   }
 }
-body div.sale div.sale-card div.card:hover h3 {
+body div.sale div.sale-card div.card-slide .card:hover h3 {
   background-color: #fff;
   color: #000;
 }
-body div.sale div.sale-card div.card img {
+body div.sale div.sale-card div.card-slide .card img {
   height: 70%;
   overflow: hidden;
   width: 100%;
@@ -388,7 +540,7 @@ body div.sale div.sale-card div.card img {
      object-fit: cover;
   vertical-align: middle;
 }
-body div.sale div.sale-card div.card h3 {
+body div.sale div.sale-card div.card-slide .card h3 {
   font-size: 20px;
   font-weight: normal;
   letter-spacing: 5px;
@@ -661,7 +813,6 @@ body div.news a.news-more-info {
 body div.news a.news-more-info:hover {
   background-color: #fff;
   color: #000;
-  border: 1px solid #a8cc05;
 }
 body div.store-search {
   background-color: #eee;
@@ -694,6 +845,12 @@ body div.store-search div.input-group {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+}
+@media (width <= 768px) {
+  body div.store-search div.input-group {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 body div.store-search div.input-group input {
   width: 45%;
@@ -738,7 +895,7 @@ body div.store-search div.input-group a {
 @media (width <= 768px) {
   body div.store-search div.input-group a {
     bottom: -50px;
-    right: -45px;
+    right: 15px;
     padding-top: 6px;
     width: 100px;
     font-size: 14px;
@@ -813,15 +970,17 @@ body footer div.footer-info div.info div.breadcrumb {
     width: 100%;
   }
 }
-body footer div.footer-info div.info div.breadcrumb span {
+body footer div.footer-info div.info div.breadcrumb a {
   font-size: 16px;
+  text-decoration: none;
+  color: #000;
 }
 @media (width <= 768px) {
-  body footer div.footer-info div.info div.breadcrumb span {
+  body footer div.footer-info div.info div.breadcrumb a {
     font-size: 14px;
   }
 }
-body footer div.footer-info div.info div.breadcrumb span + span::before {
+body footer div.footer-info div.info div.breadcrumb a + a::before {
   content: "/";
   margin: 0 5px;
 }
@@ -1256,7 +1415,7 @@ body.about main.main-process {
 }
 @media (width <= 768px) {
   body.about main.main-process {
-    margin: 20px 0;
+    margin: 5px 0;
   }
 }
 body.about main.main-process .main-process-info {
