@@ -24,7 +24,9 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    <!-- JQuery -->
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <!-- css -->
     <link rel="stylesheet" href="./navbar.css" />
   </head>
   <body class="product">
@@ -64,68 +66,69 @@
     </div>
     <div class="product-group">
       <div class="side-bar">
-        <span>嚴選純茶</span>
-        <span>小農鮮奶</span>
-        <span>特調飲品</span>
-        <span>奶蓋系列</span>
+        <a id="all">全品項</a>
+        <a id="tea">嚴選純茶</a>
+        <a id="milk">小農鮮奶</a>
+        <a id="special">特調飲品</a>
+        <a id="foam">奶蓋系列</a>
       </div>
       <div class="product-card-group">
-        <div class="product-card">
+        <div class="product-card milk">
           <div class="img-group">
             <img src="./飲料圖片/黑糖.jpg" alt="黑糖" />
           </div>
 
           <p>黑糖珍珠鮮奶</p>
         </div>
-        <div class="product-card">
+        <div class="product-card special">
           <div class="img-group">
             <img src="././飲料圖片/lemon.jpg" alt="lemon" />
           </div>
 
           <p>檸檬青茶</p>
         </div>
-        <div class="product-card">
+        <div class="product-card milk">
           <div class="img-group">
             <img src="./飲料圖片/red tea lette.jpg" alt="red tea lette" />
           </div>
           <p>紅茶那堤</p>
         </div>
-        <div class="product-card">
+        <div class="product-card tea">
           <div class="img-group">
             <img src="./飲料圖片/oolong.jpg" alt="oolong" />
           </div>
 
           <p>琥珀烏龍</p>
         </div>
-        <div class="product-card">
+        <div class="product-card tea">
           <div class="img-group">
             <img src="./飲料圖片/redtea.jpg" alt="redtea" />
           </div>
 
           <p>錫蘭紅茶</p>
         </div>
-        <div class="product-card">
+        <div class="product-card foam">
           <div class="img-group">
             <img src="./飲料圖片/red.jpg" alt="red" />
           </div>
 
           <p>奶蓋紅茶</p>
         </div>
-        <div class="product-card">
+        <div class="product-card foam">
           <div class="img-group">
             <img src="./飲料圖片/green.jpg" alt="green" />
           </div>
 
           <p>奶蓋綠茶</p>
         </div>
-        <div class="product-card">
+        <div class="product-card special">
           <div class="img-group">
             <img src="./飲料圖片/apple.jpg" alt="apple" />
           </div>
 
           <p>蘋果金萱</p>
         </div>
-        <div class="product-card">
+        <div class="product-card milk">
           <div class="img-group">
             <img src="./飲料圖片/mocha.jpg" alt="mocha" />
           </div>
@@ -166,6 +169,6 @@
       </div>
     </footer>
 
-    <script src="./navbar.js"></script>
+    <script src="./product.js"></script>
   </body>
 </html>

@@ -356,7 +356,7 @@ body div#slider ul#slider-content li .active-banner h1:after {
     bottom: 10px;
   }
 }
-@media (width <= 1920px) {
+@media (width >= 1440px) {
   body div#slider ul#slider-content li .active-banner h1:after {
     width: 200px;
     bottom: 80px;
@@ -377,7 +377,7 @@ body div#slider ul#slider-content li .active-banner p {
     font-size: 16px;
   }
 }
-@media (width <= 1920px) {
+@media (width >= 1440px) {
   body div#slider ul#slider-content li .active-banner p {
     width: 80%;
   }
@@ -395,7 +395,7 @@ body div#slider ul#slider-content li .member-banner {
     width: 20%;
   }
 }
-@media (width <= 1920px) {
+@media (width >= 1440px) {
   body div#slider ul#slider-content li .member-banner {
     right: 800px;
   }
@@ -1104,6 +1104,7 @@ body div.news-option div.option-items {
   align-items: flex-end;
   padding-bottom: 20px;
   gap: 5px;
+  cursor: pointer;
 }
 @media (width <= 768px) {
   body div.news-option div.option-items {
@@ -2335,12 +2336,15 @@ body.product div.product-group div.side-bar {
     border-right: transparent;
   }
 }
-body.product div.product-group div.side-bar span {
+body.product div.product-group div.side-bar a {
   font-size: 20px;
   margin: 20px 0;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
 }
 @media (width <= 768px) {
-  body.product div.product-group div.side-bar span {
+  body.product div.product-group div.side-bar a {
     font-size: 25px;
   }
 }
