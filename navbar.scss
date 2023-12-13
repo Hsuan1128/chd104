@@ -271,7 +271,7 @@ body {
               bottom: -15px;
               left: 0;
               background-color: $textColor;
-              height: 2px;
+              height: 3px;
               width: 200px;
               @media (width <= 768px) {
                 width: 150px;
@@ -300,6 +300,10 @@ body {
           position: absolute;
           bottom: 60px;
           right: 1650px;
+          @media (width <= 1920px) {
+            right: 2100px;
+            bottom: 10px;
+          }
           @media (width <= 768px) {
             left: 400px;
             height: 20%;
@@ -309,7 +313,7 @@ body {
           h1 {
             color: #fff;
             font-weight: normal;
-            font-size: $h1titleSize;
+            font-size: 50px;
             @media (width <= 768px) {
               font-size: 25px;
             }
@@ -320,11 +324,15 @@ body {
               bottom: 45px;
               left: 0;
               background-color: $textColor;
-              height: 2px;
+              height: 3px;
               width: 200px;
               @media (width <= 768px) {
                 width: 150px;
                 bottom: 10px;
+              }
+              @media (width <= 1920px) {
+                width: 200px;
+                bottom: 80px;
               }
             }
           }
@@ -340,6 +348,9 @@ body {
               margin-top: 20px;
               font-size: 16px;
             }
+            @media (width <= 1920px) {
+              width: 80%;
+            }
           }
         }
         .member-banner {
@@ -352,10 +363,13 @@ body {
             bottom: 35px;
             width: 20%;
           }
+          @media (width <= 1920px) {
+            right: 800px;
+          }
           h1 {
             color: #fff;
             font-weight: normal;
-            font-size: $h1titleSize;
+            font-size: 50px;
 
             &:after {
               content: "";
@@ -363,7 +377,7 @@ body {
               bottom: 45px;
               left: 0;
               background-color: $textColor;
-              height: 2px;
+              height: 3px;
               width: 200px;
               @media (width <= 768px) {
                 width: 150px;
@@ -474,6 +488,9 @@ body {
         justify-content: center;
         align-items: center;
       }
+      @media (width <= 1920px) {
+        width: 70%;
+      }
       div.card-slide {
         position: absolute;
         width: 2000px;
@@ -484,8 +501,8 @@ body {
           width: 200px;
           height: 300px;
           float: left;
-          @media (width <= 768px) {
-            width: 200px;
+          @media (width <= 1920px) {
+            width: 255px;
             height: 300px;
           }
           &:hover h3 {

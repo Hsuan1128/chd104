@@ -285,7 +285,7 @@ body div#slider ul#slider-content li .banner-title h1:first-child::after {
   bottom: -15px;
   left: 0;
   background-color: #a8cc05;
-  height: 2px;
+  height: 3px;
   width: 200px;
 }
 @media (width <= 768px) {
@@ -317,6 +317,12 @@ body div#slider ul#slider-content li .active-banner {
   bottom: 60px;
   right: 1650px;
 }
+@media (width <= 1920px) {
+  body div#slider ul#slider-content li .active-banner {
+    right: 2100px;
+    bottom: 10px;
+  }
+}
 @media (width <= 768px) {
   body div#slider ul#slider-content li .active-banner {
     left: 400px;
@@ -328,7 +334,7 @@ body div#slider ul#slider-content li .active-banner {
 body div#slider ul#slider-content li .active-banner h1 {
   color: #fff;
   font-weight: normal;
-  font-size: 35px;
+  font-size: 50px;
 }
 @media (width <= 768px) {
   body div#slider ul#slider-content li .active-banner h1 {
@@ -341,13 +347,19 @@ body div#slider ul#slider-content li .active-banner h1:after {
   bottom: 45px;
   left: 0;
   background-color: #a8cc05;
-  height: 2px;
+  height: 3px;
   width: 200px;
 }
 @media (width <= 768px) {
   body div#slider ul#slider-content li .active-banner h1:after {
     width: 150px;
     bottom: 10px;
+  }
+}
+@media (width <= 1920px) {
+  body div#slider ul#slider-content li .active-banner h1:after {
+    width: 200px;
+    bottom: 80px;
   }
 }
 body div#slider ul#slider-content li .active-banner p {
@@ -365,6 +377,11 @@ body div#slider ul#slider-content li .active-banner p {
     font-size: 16px;
   }
 }
+@media (width <= 1920px) {
+  body div#slider ul#slider-content li .active-banner p {
+    width: 80%;
+  }
+}
 body div#slider ul#slider-content li .member-banner {
   position: absolute;
   right: 800px;
@@ -378,10 +395,15 @@ body div#slider ul#slider-content li .member-banner {
     width: 20%;
   }
 }
+@media (width <= 1920px) {
+  body div#slider ul#slider-content li .member-banner {
+    right: 800px;
+  }
+}
 body div#slider ul#slider-content li .member-banner h1 {
   color: #fff;
   font-weight: normal;
-  font-size: 35px;
+  font-size: 50px;
 }
 body div#slider ul#slider-content li .member-banner h1:after {
   content: "";
@@ -389,7 +411,7 @@ body div#slider ul#slider-content li .member-banner h1:after {
   bottom: 45px;
   left: 0;
   background-color: #a8cc05;
-  height: 2px;
+  height: 3px;
   width: 200px;
 }
 @media (width <= 768px) {
@@ -510,6 +532,11 @@ body div.sale div.sale-card {
     align-items: center;
   }
 }
+@media (width <= 1920px) {
+  body div.sale div.sale-card {
+    width: 70%;
+  }
+}
 body div.sale div.sale-card div.card-slide {
   position: absolute;
   width: 2000px;
@@ -522,9 +549,9 @@ body div.sale div.sale-card div.card-slide .card {
   height: 300px;
   float: left;
 }
-@media (width <= 768px) {
+@media (width <= 1920px) {
   body div.sale div.sale-card div.card-slide .card {
-    width: 200px;
+    width: 255px;
     height: 300px;
   }
 }

@@ -24,7 +24,9 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    <!-- JQuery -->
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="./navbar.css" />
   </head>
   <body>
@@ -67,14 +69,14 @@
     </div>
     <div class="news-option">
       <div class="option-items">
-        <a href="#">全部</a>
-        <a href="#">優惠</a>
-        <a href="#">新品</a>
-        <a href="#">活動</a>
+        <a href="#" id="all">全部</a>
+        <a href="#" id="discount">優惠</a>
+        <a href="#" id="new-item">新品</a>
+        <a href="#" id="activity">活動</a>
       </div>
     </div>
     <div class="news-group">
-      <div class="news-card">
+      <div class="news-card discount all">
         <div class="img-group">
           <div class="img-date">NOV. 15</div>
           <img src="./member-img.png" alt="會員日" />
@@ -89,7 +91,7 @@
           <a href="#">read more...</a>
         </div>
       </div>
-      <div class="news-card">
+      <div class="news-card new-item all">
         <div class="img-group">
           <div class="img-date">NOV. 13</div>
           <img src="./產品.jpeg" alt="新品" />
@@ -103,7 +105,7 @@
           <a href="#">read more...</a>
         </div>
       </div>
-      <div class="news-card">
+      <div class="news-card activity all">
         <div class="img-group">
           <div class="img-date">NOV. 11</div>
           <img src="./new open 1.png" alt="新門市" />
@@ -118,7 +120,7 @@
           <a href="#">read more...</a>
         </div>
       </div>
-      <div class="news-card">
+      <div class="news-card activity all">
         <div class="img-group">
           <div class="img-date">NOV. 05</div>
           <img src="./茶葉活動 1.png" alt="體驗活動" />
@@ -172,6 +174,6 @@
       </div>
     </footer>
 
-    <script src="./navbar.js"></script>
+    <script src="./news.js"></script>
   </body>
 </html>
