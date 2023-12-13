@@ -317,7 +317,7 @@ body div#slider ul#slider-content li .active-banner {
   bottom: 60px;
   right: 1650px;
 }
-@media (width <= 1920px) {
+@media (width >= 1440px) {
   body div#slider ul#slider-content li .active-banner {
     right: 2100px;
     bottom: 10px;
@@ -532,7 +532,7 @@ body div.sale div.sale-card {
     align-items: center;
   }
 }
-@media (width <= 1920px) {
+@media (width >= 1440px) {
   body div.sale div.sale-card {
     width: 70%;
   }
@@ -549,7 +549,7 @@ body div.sale div.sale-card div.card-slide .card {
   height: 300px;
   float: left;
 }
-@media (width <= 1920px) {
+@media (width >= 1440px) {
   body div.sale div.sale-card div.card-slide .card {
     width: 255px;
     height: 300px;
