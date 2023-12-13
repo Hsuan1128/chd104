@@ -2342,6 +2342,10 @@ body.product div.product-group div.side-bar a {
   color: #000;
   cursor: pointer;
   text-decoration: none;
+  transition: all 0.2s linear;
+}
+body.product div.product-group div.side-bar a:hover {
+  color: #a8cc05;
 }
 @media (width <= 768px) {
   body.product div.product-group div.side-bar a {
