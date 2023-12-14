@@ -148,6 +148,9 @@ body header.title nav {
   align-items: flex-end;
   height: 100%;
 }
+body header.title nav #id-icon {
+  display: none;
+}
 @media (width <= 768px) {
   body header.title nav {
     display: none;
