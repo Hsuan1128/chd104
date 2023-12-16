@@ -168,6 +168,16 @@ body header.title nav #member-page #member-inside {
   bottom: -170px;
   right: 195px;
 }
+@media (width <= 1440px) {
+  body header.title nav #member-page #member-inside {
+    right: 163px;
+  }
+}
+@media (width <= 1280px) {
+  body header.title nav #member-page #member-inside {
+    right: 100px;
+  }
+}
 body header.title nav #member-page #member-inside .mem-tran {
   rotate: 45deg;
   top: -15px;
