@@ -175,7 +175,7 @@ body header.title nav #member-page #member-inside {
 }
 @media (width <= 1280px) {
   body header.title nav #member-page #member-inside {
-    right: 100px;
+    right: 80px;
   }
 }
 body header.title nav #member-page #member-inside .mem-tran {
