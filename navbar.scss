@@ -147,6 +147,40 @@ body {
     nav {
       #id-icon {
         display: none;
+        cursor: pointer;
+      }
+      #member-page {
+        display: none;
+        #member-inside {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 150px;
+          height: 150px;
+          background-color: $joinColor;
+          position: absolute;
+          bottom: -170px;
+          right: 195px;
+          .mem-tran {
+            rotate: 45deg;
+            top: -15px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: $joinColor;
+            position: absolute;
+          }
+          #logout {
+            cursor: pointer;
+            text-align: center;
+            width: 50%;
+            padding-top: 5px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 30px;
+          }
+        }
       }
       padding-bottom: 10px;
       flex: 2;
@@ -155,6 +189,7 @@ body {
       justify-content: flex-end;
       align-items: flex-end;
       height: 100%;
+      position: relative;
       @media (width <= 768px) {
         display: none;
       }
