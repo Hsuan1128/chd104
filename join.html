@@ -211,12 +211,11 @@
 
     <script>
       let fillIn = document.querySelector("#send");
-      console.log(fillIn);
       let form = document.querySelector("#join-form");
-      console.log(form);
       let cross = document.querySelector("#cross");
       let popOut = document.querySelector(".join-page");
-      console.log(popOut);
+
+      //點擊表單填寫 表單出現
       form.style.display = "none";
       fillIn.addEventListener("click", () => {
         if (form.style.display == "none") {
@@ -226,6 +225,7 @@
           form.style.display = "none";
         }
       });
+      //點擊叉叉表單消失
       cross.addEventListener("click", () => {
         if (form.style.display == "block") {
           form.style.display = "none";
@@ -235,11 +235,18 @@
         }
       });
 
+      //填寫表單成功後 表單消失
       let submit = document.querySelector("#submit");
       submit.addEventListener("click", () => {
         form.style.display = "none";
         popOut.style.overflow = "auto";
         alert("填寫成功");
+      });
+
+      //點選黑色處表單會消失
+      form.addEventListener("click", () => {
+        form.style.display = "none";
+        popOut.style.overflow = "auto";
       });
     </script>
   </body>

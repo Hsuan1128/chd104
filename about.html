@@ -24,7 +24,9 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    <!-- JQuery -->
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="./navbar.css" />
   </head>
   <body class="about">
@@ -68,20 +70,20 @@
     </div>
     <div class="process">
       <h2>一起探究新鮮的來源</h2>
-      <div class="precess-group">
+      <div class="precess-group" id="process1">
         <div class="process-box">
           <i class="fa-solid fa-leaf"></i>
           <h3>STEP1:手工採摘</h3>
         </div>
-        <div class="process-box">
+        <div class="process-box" id="process2">
           <i class="fa-solid fa-fire"></i>
           <h3>STEP2:專業烘培</h3>
         </div>
-        <div class="process-box">
+        <div class="process-box" id="process3">
           <i class="fa-solid fa-truck"></i>
           <h3>STEP3:快速配送</h3>
         </div>
-        <div class="process-box">
+        <div class="process-box" id="process4">
           <i class="fa-solid fa-glass-water-droplet"></i>
           <h3>STEP4:新鮮現泡</h3>
         </div>
@@ -89,7 +91,7 @@
     </div>
 
     <main class="main-process">
-      <div class="main-process-info" id="手工採摘">
+      <div class="main-process-info" id="step1">
         <img src="./茶園.webp" alt="手工採摘" />
         <div class="text">
           <h2>手工採摘</h2>
@@ -98,7 +100,7 @@
           </p>
         </div>
       </div>
-      <div class="main-process-info" id="專業烘培">
+      <div class="main-process-info" id="step2">
         <div class="text">
           <h2>專業烘培</h2>
           <p>
@@ -107,7 +109,7 @@
         </div>
         <img src="./烘培.jpg" alt="專業烘培" />
       </div>
-      <div class="main-process-info" id="快速配送">
+      <div class="main-process-info" id="step3">
         <img src="./貨車.jpg" alt="快速配送" />
         <div class="text">
           <h2>快速配送</h2>
@@ -116,7 +118,7 @@
           </p>
         </div>
       </div>
-      <div class="main-process-info" id="新鮮現泡">
+      <div class="main-process-info" id="step4">
         <div class="text">
           <h2>新鮮現泡</h2>
           <p>
@@ -158,7 +160,6 @@
         </p>
       </div>
     </footer>
-
-    <script src="./navbar.js"></script>
+    <script src="about.js"></script>
   </body>
 </html>
