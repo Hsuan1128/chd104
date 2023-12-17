@@ -1054,7 +1054,6 @@ body {
   }
   div.news-option {
     background-color: $bgc;
-    //border: 2px solid red;
     width: 100%;
     height: 150px;
     display: flex;
@@ -1104,7 +1103,6 @@ body {
       height: 200px;
       @media (width <= 768px) {
         flex-direction: column;
-        //border: 2px solid red;
         height: 450px;
         width: 80%;
       }
@@ -1115,7 +1113,6 @@ body {
         @media (width <= 768px) {
           height: 50%;
         }
-        //border: 2px solid red;
         .img-date {
           position: absolute;
           top: 0;
@@ -1150,7 +1147,6 @@ body {
           margin: 10px 0;
           font-weight: 500;
           line-height: 1.35rem;
-          //border: 2px solid red;
           &:last-of-type {
             font-size: 16px;
           }
@@ -1189,7 +1185,6 @@ body {
     }
   }
   div.page-list {
-    //border: 2px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1214,7 +1209,6 @@ body {
       }
     }
     i {
-      //border: 1px solid red;
       text-align: center;
       width: 30px;
       height: 30px;
@@ -1282,7 +1276,6 @@ body.about {
             right: 15px;
           }
         }
-        //border: 2px solid red;
         &:last-of-type {
           text-align: end;
         }
@@ -1293,7 +1286,6 @@ body.about {
   div.process {
     background-image: url("./paper.png");
     background-color: $bgc;
-    //border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1394,7 +1386,6 @@ body.about {
       @media (width <= 768px) {
         align-items: center;
         flex-direction: column;
-        //border: 2px solid blue;
         height: 450px;
         width: 100%;
       }
@@ -1417,7 +1408,6 @@ body.about {
         align-items: center;
         justify-content: center;
         flex: 1;
-        //border: 3px solid green;
         h2 {
           letter-spacing: 5px;
           font-weight: normal;
@@ -1494,7 +1484,6 @@ body {
         cursor: pointer;
       }
       .join-input {
-        //border: 2px solid red;
         width: 50%;
         margin: 5px 0;
         flex-wrap: wrap;
@@ -1545,7 +1534,6 @@ body {
         border-radius: 30px;
       }
       .join-input-location {
-        //border: 2px solid green;
         width: 50%;
         margin: 10px 0;
         @media (width<=768px) {
@@ -1562,7 +1550,6 @@ body {
     }
   }
   div.join-us {
-    //border: 2px solid red;
     display: flex;
     width: 100%;
     height: 300px;
@@ -1597,11 +1584,9 @@ body {
       @media (width<=768px) {
         flex-direction: column;
         justify-content: space-evenly;
-        //border: 2px solid red;
         height: 350px;
       }
       .join-box {
-        //border: 2px solid red;
         margin: 0 10px;
         width: 25%;
         height: 90%;
@@ -1609,7 +1594,6 @@ body {
           display: flex;
           width: 90%;
           height: 30%;
-          //border: 3px solid red;
         }
         .img-area {
           width: 100%;
@@ -1620,7 +1604,6 @@ body {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          //border: 2px solid red;
           @media (width<=768px) {
             width: 50%;
             height: 100%;
@@ -1673,7 +1656,6 @@ body {
       width: 90%;
       line-height: 1.5;
       letter-spacing: 1px;
-      //border: 2px solid yellow;
     }
   }
 
@@ -1699,7 +1681,6 @@ body {
       }
     }
     .join-step-group {
-      //border: 2px solid blue;
       width: 40%;
       display: flex;
       flex-direction: column;
@@ -1770,7 +1751,6 @@ body {
     margin-top: 50px;
     width: 100%;
     height: 300px;
-    //border: 3px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1798,7 +1778,6 @@ body {
       display: flex;
       height: 500px;
       @media (width<=768px) {
-        //border: 3px solid black;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1825,7 +1804,6 @@ body {
           flex-direction: row;
           justify-content: center;
           width: 80%;
-          //border: 2px solid red;
         }
         li {
           list-style: none;
@@ -1833,7 +1811,6 @@ body {
           @media (width<=768px) {
             width: 100%;
             margin-top: 20px;
-            //border: 2px solid red;
           }
           i {
             text-align: center;
@@ -1856,12 +1833,10 @@ body {
   div.contact-us {
     margin: 50px 0;
     width: 100%;
-    //border: 3px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
     @media (width<=768px) {
-      //border: 2px solid red;
       margin: 150px 0px 20px 0px;
     }
     h2 {
@@ -1887,14 +1862,11 @@ body {
       flex-direction: column;
       align-items: center;
       width: 50%;
-      //border: 3px solid red;
       @media (width<=768px) {
         width: 90%;
-        //border: 2px solid red;
       }
       .input {
         margin: 10px 0;
-        //border: 2px solid blue;
         width: 60%;
         flex-wrap: wrap;
         @media (width<=768px) {
@@ -1914,7 +1886,6 @@ body {
         }
       }
       .textarea {
-        //border: 2px solid blue;
         width: 60%;
         flex-wrap: wrap;
         @media (width<=768px) {
@@ -1989,11 +1960,9 @@ body {
         width: 50%;
         height: 100%;
         @media (width <= 768px) {
-          //border: 2px solid red;
           margin-bottom: 30px;
           width: 100%;
         }
-        //border: 2px solid red;
         h2 {
           font-weight: normal;
           font-size: 25px;
@@ -2012,7 +1981,6 @@ body {
           }
         }
         .group {
-          //border: 3px solid black;
           height: 40px;
           width: 60%;
           @media (width <= 768px) {
@@ -2039,7 +2007,6 @@ body {
           }
         }
         .btn {
-          //border: 2px solid red;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
@@ -2107,7 +2074,6 @@ body {
             display: none;
           }
         }
-        //
         h2 {
           font-weight: normal;
           font-size: 25px;
