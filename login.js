@@ -14,6 +14,7 @@ $(function () {
       alert("請輸入密碼");
       return;
     }
+    //密碼正確icon出現，手機板出現在nav裡面
     if (account == acc && password == psw) {
       alert("登入成功");
       $(`#id-icon`).css({ display: "block" });

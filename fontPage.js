@@ -9,7 +9,6 @@ $(function () {
     //有幾張圖片就要加幾個小圓點
   }
   $("#contentButton li:first").addClass("clicked");
-
   $("#slider-content li").width(divWidth); // li 的寬度
   $("#slider-content").width(divWidth * imgCount); // ul 的寬度
 
@@ -23,8 +22,9 @@ $(function () {
     $("#slider-content").animate({
       left: divWidth * index * -1,
     });
-
+    //點擊黑點變綠點
     $(this).addClass("clicked");
+
     $("#contentButton li").not(this).removeClass("clicked");
 
     timer = setInterval(moveToNext, 3000);
@@ -45,7 +45,6 @@ $(function () {
     $("#contentButton li").not(`:eq(${index})`).removeClass("clicked");
   }
 });
-// $('.form_ele').attr('disabled', false);
 //推薦slider
 $(function () {
   let saleCard = $(`.card-slide`);
