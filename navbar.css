@@ -190,7 +190,7 @@ body header.title nav #member-page #member-inside {
 }
 @media (width <= 1280px) {
   body header.title nav #member-page #member-inside {
-    right: 88px;
+    right: 93px;
   }
 }
 body header.title nav #member-page #member-inside .mem-tran {
