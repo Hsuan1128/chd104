@@ -2379,3 +2379,82 @@ div.item-detail {
     }
   }
 }
+
+//新聞內頁
+body.news-page-body {
+  background-image: url("./paper.png");
+  div.news-bc {
+    ul {
+      margin-top: 20px;
+      display: flex;
+      padding: 0 100px;
+      @media (width <= 768px) {
+        padding: 0 15px;
+      }
+      li {
+        list-style: none;
+        font-size: 20px;
+        @media (width <= 768px) {
+          font-size: 16px;
+        }
+        & + li::before {
+          content: ">";
+          margin: 0 8px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $textColor;
+      }
+    }
+  }
+  div.news-page-title {
+    margin: 50px 0;
+    padding: 0 380px;
+    @media (width <= 768px) {
+      padding: 0 40px;
+    }
+    h2 {
+      font-weight: normal;
+      line-height: 2rem;
+      font-size: 35px;
+      margin-bottom: 20px;
+      @media (width <= 768px) {
+        font-size: 25px;
+      }
+    }
+    p {
+      font-size: 24px;
+      @media (width <= 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+  main.news-article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 50px 0;
+    img {
+      width: 50%;
+      height: 400px;
+      @media (width <= 768px) {
+        width: 80%;
+        height: 200px;
+      }
+    }
+    p {
+      margin-top: 20px;
+      width: 50%;
+      font-size: 18px;
+      line-height: 1.75rem;
+      letter-spacing: 2px;
+      @media (width <= 768px) {
+        width: 80%;
+        font-size: 16px;
+      }
+    }
+  }
+}

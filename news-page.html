@@ -29,7 +29,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./navbar.css" />
   </head>
-  <body>
+  <body class="news-page-body">
     <header class="title">
       <input type="checkbox" name="hb" id="menu-switch" />
       <label class="hb" for="menu-switch">
@@ -67,82 +67,26 @@
         <h1>News</h1>
       </div>
     </div>
-    <div class="news-option">
-      <div class="option-items">
-        <a id="all">全部</a>
-        <a id="new-item">新品</a>
-        <a id="discount">優惠</a>
-        <a id="activity">活動</a>
-      </div>
+
+    <div class="news-bc">
+      <ul>
+        <li><a href="./index.html">首頁</a></li>
+        <li><a href="./news.html">最新消息</a></li>
+      </ul>
     </div>
-    <div class="news-group">
-      <div class="news-card discount all">
-        <div class="img-group">
-          <div class="img-date">NOV. 15</div>
-          <img src="./member-img.png" alt="會員日" />
-        </div>
-        <div class="article-group">
-          <p>2023/11/15</p>
-          <h3 class="short">會員日</h3>
-          <p>
-            我們非常榮幸地宣布，每月15號為我們的特別日子 ——
-            會員日！這是我們表達對您的感激之情的一天，感謝您一直以來對我們的支持和鼓勵。
-          </p>
-          <a href="./news-page.html">read more...</a>
-        </div>
-      </div>
-      <div class="news-card new-item all">
-        <div class="img-group">
-          <div class="img-date">NOV. 13</div>
-          <img src="./產品.jpeg" alt="新品" />
-        </div>
-        <div class="article-group">
-          <p>2023/11/13</p>
-          <h3 class="short">新品上市</h3>
-          <p>
-            我們精心調配的飲品不僅美味，還有獨特的口感，給您一種前所未有的享受。我們堅守對品質的承諾，所有新品都使用天然成分，不含任何添加劑或人工色素，讓您品嚐到最純淨的風味。
-          </p>
-          <a href="./news-page.html">read more...</a>
-        </div>
-      </div>
-      <div class="news-card activity all">
-        <div class="img-group">
-          <div class="img-date">NOV. 11</div>
-          <img src="./new open 1.png" alt="新門市" />
-        </div>
-        <div class="article-group">
-          <p>2023/11/11</p>
-          <h3>中壢門市開幕</h3>
-          <p>
-            我們滿懷興奮和喜悅，宣布一個令人振奮的消息—Tea
-            Select中壢店正式開幕！這是一個全新的旅程，我們誠摯地邀請您加入我們，一起慶祝這個特別的時刻。
-          </p>
-          <a href="./news-page.html">read more...</a>
-        </div>
-      </div>
-      <div class="news-card activity all">
-        <div class="img-group">
-          <div class="img-date">NOV. 05</div>
-          <img src="./茶葉活動 1.png" alt="體驗活動" />
-        </div>
-        <div class="article-group">
-          <p>2023/11/05</p>
-          <h3>茶葉體驗活動</h3>
-          <p>
-            我們將帶領您遠足到附近的茶園，親身體驗採摘茶葉的過程。您將有機會了解茶葉的種植、收穫和製作過程，以及對環境的尊重。
-          </p>
-          <a href="./news-page.html">read more...</a>
-        </div>
-      </div>
+    <div class="news-page-title">
+      <h2>感謝有您，會員日特惠等您來享！</h2>
+      <p>2023/11/15</p>
     </div>
-    <div class="page-list">
-      <i class="fa-solid fa-angle-left"></i>
-      <a href="#">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <i class="fa-solid fa-angle-right"></i>
-    </div>
+    <main class="news-article">
+      <img src="./news-page-img.png" alt="news" />
+      <p>
+        親愛的會員朋友們，
+        感謝您一直以來對我們的支持與厚愛！為了回饋您的支持，我們誠摯邀請您參加我們即將舉辦的「會員日特惠」活動，讓您在購物的同時感受到更多的溫暖和驚喜。
+        活動期間，您將有機會享受獨家的會員專屬優惠，無論是商品折扣、贈品還是其他驚喜禮遇，都將為您帶來購物的愉悅體驗。謝謝您一直以來的支持，我們期待在會員日與您相見！
+        Tea Select 敬上
+      </p>
+    </main>
     <footer>
       <div class="footer-info">
         <div class="img">
@@ -174,6 +118,6 @@
       </div>
     </footer>
 
-    <script src="./news.js"></script>
+    <script src=""></script>
   </body>
 </html>

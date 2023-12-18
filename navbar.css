@@ -2618,4 +2618,94 @@ div.item-detail .info-group a {
 div.item-detail .info-group a:hover {
   background-color: #fff;
   color: #000;
+}
+
+body.news-page-body {
+  background-image: url("./paper.png");
+}
+body.news-page-body div.news-bc ul {
+  margin-top: 20px;
+  display: flex;
+  padding: 0 100px;
+}
+@media (width <= 768px) {
+  body.news-page-body div.news-bc ul {
+    padding: 0 15px;
+  }
+}
+body.news-page-body div.news-bc ul li {
+  list-style: none;
+  font-size: 20px;
+}
+@media (width <= 768px) {
+  body.news-page-body div.news-bc ul li {
+    font-size: 16px;
+  }
+}
+body.news-page-body div.news-bc ul li + li::before {
+  content: ">";
+  margin: 0 8px;
+}
+body.news-page-body div.news-bc ul a {
+  text-decoration: none;
+  color: #a8cc05;
+}
+body.news-page-body div.news-page-title {
+  margin: 50px 0;
+  padding: 0 380px;
+}
+@media (width <= 768px) {
+  body.news-page-body div.news-page-title {
+    padding: 0 40px;
+  }
+}
+body.news-page-body div.news-page-title h2 {
+  font-weight: normal;
+  line-height: 2rem;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+@media (width <= 768px) {
+  body.news-page-body div.news-page-title h2 {
+    font-size: 25px;
+  }
+}
+body.news-page-body div.news-page-title p {
+  font-size: 24px;
+}
+@media (width <= 768px) {
+  body.news-page-body div.news-page-title p {
+    font-size: 16px;
+  }
+}
+body.news-page-body main.news-article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 50px 0;
+}
+body.news-page-body main.news-article img {
+  width: 50%;
+  height: 400px;
+}
+@media (width <= 768px) {
+  body.news-page-body main.news-article img {
+    width: 80%;
+    height: 200px;
+  }
+}
+body.news-page-body main.news-article p {
+  margin-top: 20px;
+  width: 50%;
+  font-size: 18px;
+  line-height: 1.75rem;
+  letter-spacing: 2px;
+}
+@media (width <= 768px) {
+  body.news-page-body main.news-article p {
+    width: 80%;
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=navbar.css.map */
