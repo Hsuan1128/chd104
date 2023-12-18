@@ -99,10 +99,38 @@
         </form>
 
         <form class="register">
+          <div class="register-page">
+            <div class="cross"><i class="fa-solid fa-xmark"></i></div>
+            <div class="register-group">
+              <label for="account"><i class="fa-solid fa-user"></i></label>
+              <input type="text" id="register-name" placeholder="姓名" />
+            </div>
+            <div class="register-group">
+              <label for="email"><i class="fa-regular fa-envelope"></i></label>
+              <input type="email" id="email" placeholder="信箱" />
+            </div>
+            <div class="register-group">
+              <label for="password"><i class="fa-solid fa-unlock"></i></label>
+              <input
+                type="password"
+                id="register-password"
+                placeholder="密碼"
+              />
+            </div>
+            <div class="register-group">
+              <label for="password"><i class="fa-solid fa-lock"></i></label>
+              <input
+                type="password"
+                id="register-password-again"
+                placeholder="再次輸入密碼"
+              />
+            </div>
+            <a id="register-submit">註冊</a>
+          </div>
           <h2>成為Tea Select會員</h2>
           <h3>首次加入會員，贈送100元購物金</h3>
           <h3>購物金請至各門市使用</h3>
-          <a href="#">註冊會員</a>
+          <a id="register">註冊會員</a>
         </form>
       </div>
     </main>

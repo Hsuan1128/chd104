@@ -36,4 +36,17 @@ $(function () {
   $(`#hb-logout`).click(() => {
     location.reload();
   });
+
+  //註冊視窗
+  $(`#register`).click(function () {
+    $(`.register-page`).slideDown(500);
+    $(`.register-page`).css({ display: "flex" });
+  });
+  $(`.cross`).click(function () {
+    $(`.register-page`).slideUp(500);
+  });
+  $(`#register-submit`).click(function () {
+    alert(`註冊成功`);
+    $(`.register-page`).slideUp(500);
+  });
 });
