@@ -390,8 +390,18 @@ body div#slider ul#slider-content li .active-banner {
   body div#slider ul#slider-content li .active-banner {
     left: 400px;
     height: 20%;
-    width: 90%;
+    width: 85%;
     bottom: 180px;
+  }
+}
+@media (width <= 430px) {
+  body div#slider ul#slider-content li .active-banner {
+    left: 440px;
+  }
+}
+@media (width <= 391px) {
+  body div#slider ul#slider-content li .active-banner {
+    left: 410px;
   }
 }
 body div#slider ul#slider-content li .active-banner h1 {
